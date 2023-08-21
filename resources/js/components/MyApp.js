@@ -6,7 +6,7 @@ import SendEmail from "../pages/Auth/SendEmail.js";
 import Start from "../pages/Auth/Start";
 import FirstInfo from "../pages/Auth/FirstInfos";
 import SocialHandle from "../pages/Auth/SocialHandle";
-// import Secondinfos from "../pages/Auth/SecondInfos";
+import Secondinfo from "../pages/Auth/SecondInfo";
 
 
 function MyApp() {
@@ -16,7 +16,7 @@ function MyApp() {
             <Route path="/SendEmail" element={<SendEmail /> } />
             <Route path="/Start" element={<Start /> } />
             <Route path="/FirstInfo" element={<FirstInfo /> } />
-            {/* <Route path="/SecondInfo" element={<SecondInfos /> } /> */}
+            <Route path="/SecondInfo" element={<SecondInfo /> } />
             <Route path="/SocialHandle" element={<SocialHandle /> } />
             <Route path="/verify-email" element={<Start /> } />
         </Routes>
