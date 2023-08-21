@@ -50,6 +50,7 @@ const onCancel = (e) =>{
 const onSubmit = (data) =>{
     setIsLoading(true)
     setClick("")
+    setTimeout(() =>{
     axios
     .post("api/first-Info", firstInfoData)
      .then((response) => {
@@ -65,20 +66,22 @@ const onSubmit = (data) =>{
         })
         setTimeout(() => {
           setMsg("")
+          
         }, 2000);
-       navigate('/secondInfo')
-       setIsLoading(false)
-        setClick("Save Changes and NEXT")
+        navigate('/secondInfo')
+        setIsLoading(false)
+         setClick("Save Changes and NEXT")
       }
 
       if (response.data.status === "failed") {
         setMsg(response.data.message)
         setTimeout(() => {
-          setMsg("")
+          setMsg("");
         }, 2000);
         setIsLoading(false)
         setClick("Save Changes and NEXT")
       }
+    }, 1000);
     });
 
 }
@@ -222,7 +225,7 @@ const onSubmit = (data) =>{
           <Typography color="red" className="d-flex justify-content-center">{msg}</Typography>
              <div className= "row d-flex justify-content-end pt-2 title-inter">
              
-              <Button  className="text-center m-2 w-25"
+              <Button  className="text-center m-2 w-25  btn btn-outline-primary "
                 color="white"
                 onClick={onCancel}
               >

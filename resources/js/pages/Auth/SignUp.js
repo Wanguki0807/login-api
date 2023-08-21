@@ -178,7 +178,7 @@ const onSubmit = (data) => {
                      variant="outlined"
                      label="Enter User Name"
                      inputProps={{
-                      autocomplete: "off",
+                      autoComplete: "off",
                     }}
                      sx={{
                       '& .MuiFormLabel-root': {
@@ -321,12 +321,15 @@ const onSubmit = (data) => {
               <Button
                 className="text-center my-1 w-100 hover-shadow d-flex align-items-center justify-content-center  rounded-6"
                 color="primary"
-                // onClick={onSubmitHandler}
+                    style={{ maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
+                    // onClick={onSubmitHandler}
+                
               >
                <span className="ml-2"> {Register } </span>
                 {isLoading ? (
                  
-                 <CircularProgress color="inherit" size="1.4rem" />
+                 
+                 <CircularProgress color="inherit" size="2rem" />
                 ) : (
                   <span></span>
                 )}

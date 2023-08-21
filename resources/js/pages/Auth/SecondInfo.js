@@ -177,36 +177,35 @@ const onSubmit = (data) =>{
                 
             </div>
             <TextField      
-                        
+                            className="title-inter w-100 row"
                              id="outlined-multiline-flexible"
-                            label="Multiline"
                              multiline
-                             maxRows={4}
-                    
+                             maxRows={10}
                             sx={{
-                                width: { sm: 220, md: 470 },
+                                  
                                 '& .MuiFormLabel-root': {
                                   fontSize: '0.8rem',
                                   mt:'0.1rem',
-                                  
+                        
                                 },
                               }}
-                            className="row"
+                           
                             name="aboutbusiness"
                             variant="outlined"
-                            // label="Write about your business"
+                            label="Write about your business"
                             {...register("aboutbusiness",{required: true})}
                             onChange={onHandleChange} 
                         />
-                    <Box sx={{my:1}}>
+                    <Box sx={{mb:2}}>
                         {errors.aboutbusiness && <span className="error-message">Please check the User Name</span>}
                     </Box>
                    
                 <Typography color="red" className="d-flex justify-content-center">{msg}</Typography>
                 <div className= "row d-flex justify-content-end pt-2">
                 
-                <Button  className="text-center m-2 w-25"
+                <Button  className="text-center m-2 w-25  btn btn-outline-primary "
                     color="white"
+             
                     onClick={onCancel}
                 >
                 Cancel
@@ -214,13 +213,14 @@ const onSubmit = (data) =>{
                 
                 <Button
                     className="text-center m-2 w-50"
+                    style={{maxWidth: '260px', maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
                     color="primary"
                     sx={{ pb:2,width:200 ,fontsize:20,  fontWeight:'bold'}}
                     type="submit">
                     <span className="ml-2"> {click } </span>
                         {nowLoading ? (
                         
-                        <CircularProgress color="inherit" size="1.1rem"/>
+                        <CircularProgress color="inherit" size="2rem"/>
                         ) : (
                         <span></span>
                         )}

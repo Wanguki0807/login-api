@@ -30375,32 +30375,34 @@ function FirstInfo(props) {
   var onSubmit = function onSubmit(data) {
     setIsLoading(true);
     setClick("");
-    axios__WEBPACK_IMPORTED_MODULE_1___default().post("api/first-Info", firstInfoData).then(function (response) {
-      if (response.data.status === 200) {
-        setMsg(response.data.message);
-        setfirstInfoData({
-          firstname: "",
-          lastname: "",
-          phonenumber: "",
-          companyname: "",
-          companywebsite: "",
-          companylocation: ""
-        });
-        setTimeout(function () {
-          setMsg("");
-        }, 2000);
-        navigate('/secondInfo');
-        setIsLoading(false);
-        setClick("Save Changes and NEXT");
-      }
-      if (response.data.status === "failed") {
-        setMsg(response.data.message);
-        setTimeout(function () {
-          setMsg("");
-        }, 2000);
-        setIsLoading(false);
-        setClick("Save Changes and NEXT");
-      }
+    setTimeout(function () {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("api/first-Info", firstInfoData).then(function (response) {
+        if (response.data.status === 200) {
+          setMsg(response.data.message);
+          setfirstInfoData({
+            firstname: "",
+            lastname: "",
+            phonenumber: "",
+            companyname: "",
+            companywebsite: "",
+            companylocation: ""
+          });
+          setTimeout(function () {
+            setMsg("");
+          }, 2000);
+          navigate('/secondInfo');
+          setIsLoading(false);
+          setClick("Save Changes and NEXT");
+        }
+        if (response.data.status === "failed") {
+          setMsg(response.data.message);
+          setTimeout(function () {
+            setMsg("");
+          }, 2000);
+          setIsLoading(false);
+          setClick("Save Changes and NEXT");
+        }
+      }, 1000);
     });
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -30610,7 +30612,7 @@ function FirstInfo(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "row d-flex justify-content-end pt-2 title-inter",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              className: "text-center m-2 w-25",
+              className: "text-center m-2 w-25  btn btn-outline-primary ",
               color: "white",
               onClick: onCancel,
               children: "Cancel"
@@ -30797,12 +30799,9 @@ function SecondInfo(props) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
           onSubmit: handleSubmit(onSubmit),
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            className: "row",
-            variant: "h5",
+            className: "row title largesize",
             sx: {
               pb: 3,
-              pt: 2,
-              fontWeight: 'bold',
               textAlign: 'center'
             },
             children: "General Business Infomation"
@@ -30815,7 +30814,7 @@ function SecondInfo(props) {
               },
               className: "col-md-6 col-12",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                size: "small",
+                className: "title-inter",
                 sx: {
                   '& .MuiFormLabel-root': {
                     fontSize: '0.8rem',
@@ -30831,14 +30830,14 @@ function SecondInfo(props) {
                 onChange: onHandleChange
               })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 sx: {
-                  my: 1
+                  mb: 2
                 },
                 children: errors.nicCategory && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                   className: "error-message",
                   children: "Please check the User Name"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                size: "small",
+                className: "title-inter",
                 sx: {
                   '& .MuiFormLabel-root': {
                     fontSize: '0.8rem',
@@ -30854,7 +30853,7 @@ function SecondInfo(props) {
                 onChange: onHandleChange
               })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 sx: {
-                  my: 1
+                  mb: 2
                 },
                 children: errors.companysize && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                   className: "error-message",
@@ -30868,7 +30867,7 @@ function SecondInfo(props) {
               },
               className: "col-md-6 col-12",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                size: "small",
+                className: "title-inter",
                 sx: {
                   '& .MuiFormLabel-root': {
                     fontSize: '0.8rem',
@@ -30884,14 +30883,14 @@ function SecondInfo(props) {
                 onChange: onHandleChange
               })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 sx: {
-                  my: 1
+                  mb: 2
                 },
                 children: errors.budget && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                   className: "error-message",
                   children: "Please check the User Name"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                size: "small",
+                className: "title-inter",
                 sx: {
                   '& .MuiFormLabel-root': {
                     fontSize: '0.8rem',
@@ -30907,7 +30906,7 @@ function SecondInfo(props) {
                 onChange: onHandleChange
               })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                 sx: {
-                  my: 1
+                  mb: 2
                 },
                 children: errors.companyfounded && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                   className: "error-message",
@@ -30916,18 +30915,16 @@ function SecondInfo(props) {
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-            size: "large",
+            className: "title-inter w-100 row",
+            id: "outlined-multiline-flexible",
+            multiline: true,
+            maxRows: 10,
             sx: {
-              width: {
-                sm: 220,
-                md: 470
-              },
               '& .MuiFormLabel-root': {
                 fontSize: '0.8rem',
                 mt: '0.1rem'
               }
             },
-            className: "row",
             name: "aboutbusiness",
             variant: "outlined",
             label: "Write about your business"
@@ -30937,7 +30934,7 @@ function SecondInfo(props) {
             onChange: onHandleChange
           })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
             sx: {
-              my: 1
+              mb: 2
             },
             children: errors.aboutbusiness && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
               className: "error-message",
@@ -30950,12 +30947,18 @@ function SecondInfo(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "row d-flex justify-content-end pt-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              className: "text-center m-2 w-25",
+              className: "text-center m-2 w-25  btn btn-outline-primary ",
               color: "white",
               onClick: onCancel,
               children: "Cancel"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
               className: "text-center m-2 w-50",
+              style: {
+                maxWidth: '260px',
+                maxHeight: '48px',
+                minWidth: '100px',
+                minHeight: '48px'
+              },
               color: "primary",
               sx: {
                 pb: 2,
@@ -30969,7 +30972,7 @@ function SecondInfo(props) {
                 children: [" ", click, " "]
               }), nowLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
                 color: "inherit",
-                size: "1.1rem"
+                size: "2rem"
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {})]
             })]
           })]
@@ -31402,7 +31405,7 @@ function Signup(props) {
               variant: "outlined",
               label: "Enter User Name",
               inputProps: {
-                autocomplete: "off"
+                autoComplete: "off"
               },
               sx: {
                 '& .MuiFormLabel-root': {
@@ -31548,7 +31551,12 @@ function Signup(props) {
             children: msg
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_19__["default"], {
             className: "text-center my-1 w-100 hover-shadow d-flex align-items-center justify-content-center  rounded-6",
-            color: "primary"
+            color: "primary",
+            style: {
+              maxHeight: '48px',
+              minWidth: '100px',
+              minHeight: '48px'
+            }
             // onClick={onSubmitHandler}
             ,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
@@ -31556,7 +31564,7 @@ function Signup(props) {
               children: [" ", Register, " "]
             }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
               color: "inherit",
-              size: "1.4rem"
+              size: "2rem"
             }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {})]
           })]
         })
