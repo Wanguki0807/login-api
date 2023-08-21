@@ -67,6 +67,7 @@ class UserController extends Controller
             
         );
         $user_status = User::where("email", $request->email)->first();
+    //  |   $user_status = User::where("email", $request->email)->first();
      
         
         if(!is_null($user_status)) {
