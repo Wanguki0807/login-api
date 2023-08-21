@@ -1,0 +1,81 @@
+.containers {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 40px;
+    color: #fff;
+    font-weight: 600;
+    border: solid 1px;
+    border-radius:3%;
+    box-shadow: 7px -8px 11px -5px rgba(#195190FF);
+}
+.Tab{
+    display: flex;
+    justify-content: space-between;
+}
+.signUp, .signIn{
+    background-color: #A2A2A1FF;
+    width:50%;
+    font-size: 22px;
+    color: #201f1f;
+    padding: 10px;
+    text-align: center;
+}
+.signIn:hover, .signUp:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.activeLink{
+    color: #fff;
+    background-color: #195190FF;
+}
+.border-radiusImportant{
+    border-radius: 5px !important;
+  }
+  .error-message{
+    color:red;
+    font-size:13px;
+  }
+  .text-blue{
+    color:blue;
+    text-align: center;
+    font-weight:'bold';
+  }
+  .sendEmail-card{
+    padding-top:100px;
+  }
+  .left-img{
+     background-image:url("../../../public/assets/people-talking.png"); 
+     background-size: cover;
+    min-width:200px;
+  }
+  .signup-page{
+    
+    max-width:60%;
+    margin:auto;
+
+  }
+  .firstInfo-page{
+     width:70%;
+    margin:auto;
+  }
+  .secondInfo-page{
+    width:70%;
+    margin:auto;
+  }
+  .social-page{
+    width:70%;
+    margin:auto;
+  }
+  .start-page{
+    max-width:90%;
+    margin:auto;
+  
+  }
+  .trial-page{
+    width:100%;
+    margin:auto;           
+  }
+.signin-page{
+  max-width:70%;
+  margin:auto;
+  margin-top:15%
+}

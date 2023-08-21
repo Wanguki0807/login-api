@@ -1,0 +1,128 @@
+
+
+#app{
+  background-image: url("../Assets/SVG/gradient-bg.svg");
+  background-repeat:no-repeat;
+  display:flex;
+  height:100%;
+}
+
+.containers {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 40px;
+    color: #fff;
+    font-weight: 600;
+    border: solid 1px;
+    border-radius:3%;
+    box-shadow: 7px -8px 11px -5px rgba(#195190FF);
+}
+.Tab{
+    display: flex;
+    justify-content: space-between;
+}
+.signUp, .signIn{
+    background-color: #A2A2A1FF;
+    width:50%;
+    font-size: 22px;
+    color: #201f1f;
+    padding: 10px;
+    text-align: center;
+}
+.signIn:hover, .signUp:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.activeLink{
+    color: #fff;
+    background-color: #195190FF;
+}
+.border-radiusImportant{
+    border-radius: 5px !important;
+  }
+  .error-message{
+    color:red;
+    font-size:13px;
+  }
+  .text-blue{
+    color:blue;
+    text-align: center;
+    font-weight:'bold';
+  }
+  /* .sendEmail-card{
+    padding-top:100px;
+  } */
+  .left-img{
+     background-image:url("../Assets/png/person-standing.png"); 
+     background-size: cover;
+
+    min-width:200px;
+  }
+
+  .signup-page{
+
+    width:444px;
+    margin:auto;
+
+  }
+  .sendEmail-page{
+  
+    min-width:444px;
+    margin:auto;
+
+  }
+  .firstInfo-page{
+     width:690px;
+    margin:auto;
+  }
+  .secondInfo-page{
+    width:50%;
+    margin:auto;
+  }
+  .social-page{
+    width:50%;
+    margin:auto;
+  }
+  .start-page{
+    width:879px;
+    margin:auto;
+  
+  }
+  .trial-page{
+    width:60%;
+    margin:auto;           
+  }
+.signin-page{
+  max-width:40%;
+  margin:auto;
+  margin-top:15%
+}
+.linkback, a{
+  text-decoration: none;
+}
+.title {
+  font-Family:'Plus Jakarta Sans' !important;
+ }
+ .largesize{ 
+  font-Size:32px !important;
+  font-Weight:700 !important ;
+}
+.bigsize{
+  font-Size:32px !important;
+  font-Weight:600 !important ;
+}
+.smallsize{
+  font-Size:18px !important;
+  font-Weight:500 !important ;
+}
+.title-inter {
+  font-Family:'inter' !important;
+ }
+.smalltitle .MuiCardHeader-title{
+  font-Family:'Plus Jakarta Sans' !important;
+  font-Size:18px !important;
+  font-Weight:700 !important ;
+
+}
+.card{
+  font-Family:'Plus Jakarta Sans' !important;
+}
