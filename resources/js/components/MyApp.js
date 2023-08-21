@@ -6,7 +6,7 @@ import SendEmail from "../pages/Auth/SendEmail.js";
 import Start from "../pages/Auth/Start";
 import FirstInfo from "../pages/Auth/FirstInfos";
 import SocialHandle from "../pages/Auth/SocialHandle";
-import Secondinfo from "../pages/Auth/SecondInfo";
+import SecondInfo from "../pages/Auth/SecondInfo";
 
 
 function MyApp() {
