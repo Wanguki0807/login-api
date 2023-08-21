@@ -30773,14 +30773,14 @@ function SecondInfo(props) {
       color: "primary",
       variant: "h4",
       sx: {
-        pb: 2,
+        pb: 1,
         textAlign: 'center'
       },
       children: "LOGO"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
       elevation: 2,
       sx: {
-        p: 4,
+        p: 6,
         mt: 3,
         borderRadius: 5
       },

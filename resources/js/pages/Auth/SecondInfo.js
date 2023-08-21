@@ -82,10 +82,10 @@ const onSubmit = (data) =>{
 }
     return (
       <div className="secondInfo-page">
-         <Typography   color="primary" variant="h4" sx={{pb:2,textAlign: 'center'}}>
+         <Typography   color="primary" variant="h4" sx={{pb:1,textAlign: 'center'}}>
           LOGO
              </Typography>
-        <Card elevation={2}  sx={{p:4,mt:3 ,borderRadius: 5}} >
+        <Card elevation={2}  sx={{p:6,mt:3 ,borderRadius: 5}} >
           <CardHeader variant="h5"
             sx={{ p:0 ,  fontWeight:'bold',textAlign: 'center'}}
             className="w-100"
@@ -94,14 +94,14 @@ const onSubmit = (data) =>{
           
           <CardContent className="container p-0" >
           <Form  onSubmit={handleSubmit(onSubmit)}>
-             <Typography className="row"variant="h5" sx={{pb:3, pt:2, fontWeight:'bold',textAlign: 'center'}} >
+             <Typography className="row title largesize"sx={{pb:3,textAlign: 'center'}} >
                     General Business Infomation
              </Typography>
             <div className="row pt-2">
             <Stack spacing={0} sx={{pb:0}} className="col-md-6 col-12">
 
                 <TextField
-                        size = "small"
+                        className = "title-inter"
                         sx={{
                             '& .MuiFormLabel-root': {
                               fontSize: '0.8rem',
@@ -114,11 +114,11 @@ const onSubmit = (data) =>{
                         {...register("nicCategory",{required: true})}
                         onChange={onHandleChange} 
                     />
-                <Box sx={{my:1}}>
+                <Box sx={{mb:2}}>
                     {errors.nicCategory && <span className="error-message">Please check the User Name</span>}
                 </Box>
                 <TextField
-                            size = "small"
+                            className = "title-inter"
                             sx={{
                                 '& .MuiFormLabel-root': {
                                   fontSize: '0.8rem',
@@ -131,7 +131,7 @@ const onSubmit = (data) =>{
                             {...register("companysize",{required: true})}
                             onChange={onHandleChange} 
                         />
-                    <Box sx={{my:1}}>
+                    <Box sx={{mb:2}}>
                         {errors.companysize && <span className="error-message">Please check the User Name</span>}
                     </Box>
                
@@ -139,7 +139,7 @@ const onSubmit = (data) =>{
 
             <Stack spacing={0} sx={{pb:0}} className="col-md-6 col-12">
                 <TextField
-                            size = "small"
+                           className = "title-inter"
                             sx={{
                                 '& .MuiFormLabel-root': {
                                 fontSize: '0.8rem',
@@ -152,12 +152,12 @@ const onSubmit = (data) =>{
                             {...register("budget",{required: true})}
                             onChange={onHandleChange} 
                         />
-                    <Box sx={{my:1}}>
+                    <Box sx={{mb:2}}>
                         {errors.budget && <span className="error-message">Please check the User Name</span>}
                     </Box>
                     
                     <TextField
-                            size = "small"
+                            className = "title-inter"
                             sx={{
                                 '& .MuiFormLabel-root': {
                                   fontSize: '0.8rem',
@@ -170,14 +170,19 @@ const onSubmit = (data) =>{
                             {...register("companyfounded",{required: true})}
                             onChange={onHandleChange} 
                         />
-                    <Box sx={{my:1}}>
+                    <Box sx={{mb:2}}>
                         {errors.companyfounded && <span className="error-message">Please check the User Name</span>}
                     </Box>
              </Stack>
                 
             </div>
             <TextField      
-                            size = "large"
+                        
+                             id="outlined-multiline-flexible"
+                            label="Multiline"
+                             multiline
+                             maxRows={4}
+                    
                             sx={{
                                 width: { sm: 220, md: 470 },
                                 '& .MuiFormLabel-root': {
@@ -189,7 +194,7 @@ const onSubmit = (data) =>{
                             className="row"
                             name="aboutbusiness"
                             variant="outlined"
-                            label="Write about your business"
+                            // label="Write about your business"
                             {...register("aboutbusiness",{required: true})}
                             onChange={onHandleChange} 
                         />
