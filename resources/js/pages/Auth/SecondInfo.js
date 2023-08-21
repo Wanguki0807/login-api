@@ -82,10 +82,10 @@ const onSubmit = (data) =>{
 }
     return (
       <div className="secondInfo-page">
-         <Typography   color="primary" variant="h4" sx={{pb:2,mt:5, fontWeight:'bold',textAlign: 'center'}}>
+         <Typography   color="primary" variant="h4" sx={{pb:2,textAlign: 'center'}}>
           LOGO
              </Typography>
-        <Card elevation={2}  sx={{p:4,mt:3 ,borderRadius: 6}} >
+        <Card elevation={2}  sx={{p:4,mt:3 ,borderRadius: 5}} >
           <CardHeader variant="h5"
             sx={{ p:0 ,  fontWeight:'bold',textAlign: 'center'}}
             className="w-100"

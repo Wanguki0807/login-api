@@ -70,18 +70,11 @@
     margin:auto;
 
   }
-  .firstInfo-page{
+  .firstInfo-page, .secondInfo-page ,.social-page {
      width:690px;
     margin:auto;
   }
-  .secondInfo-page{
-    width:50%;
-    margin:auto;
-  }
-  .social-page{
-    width:50%;
-    margin:auto;
-  }
+
   .start-page{
     width:879px;
     margin:auto;
