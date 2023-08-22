@@ -31123,14 +31123,9 @@ function Signin(props) {
               pb: 0
             },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
-              className: "title-inter"
-              // size="Medium*"
-              ,
+              className: "title-inter",
               name: "email",
               variant: "outlined",
-              inputProps: {
-                autoComplete: "off"
-              },
               label: "Enter Email",
               sx: {
                 '& .MuiFormLabel-root': {
@@ -31155,10 +31150,7 @@ function Signin(props) {
                 children: "Enter a valid email"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
-              className: "title-inter"
-              //   size = "medium*"
-              // label="Password"
-              ,
+              className: "title-inter",
               name: "password",
               type: "password",
               variant: "outlined",

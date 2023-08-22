@@ -116,12 +116,10 @@ const onHandleChange = (e) => {
               <Stack spacing={0} sx={{pb:0}}>
             
               <TextField className="title-inter"
-                // size="Medium*"
+                
                 name="email"
                 variant="outlined"
-                inputProps={{
-                    autoComplete: "off",
-                  }}
+               
                  label="Enter Email"
                  sx={{
                   '& .MuiFormLabel-root': {
@@ -141,8 +139,6 @@ const onHandleChange = (e) => {
                   )}
                 </Box>                                
                 <TextField className="title-inter"
-                //   size = "medium*"
-                  // label="Password"
                   name="password"
                   type="password"
                   variant="outlined"
