@@ -1,210 +1,100 @@
-import { Component, useState } from "react";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import axios from "axios";
-import "../Form.css";
-import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+// import * as Yup from 'yup';
+// import { useFormik } from 'formik';
 import ArrowLeftIcon from '@untitled-ui/icons-react/build/esm/ArrowLeft';
 import {
   Box,
-  // Button,
+  Button,
   Card,
   CardContent,
   CardHeader,
-  Checkbox,
-  FormHelperText,
-  // Link,
-  Stack,
+  Link,
   SvgIcon,
   TextField,
-  Typography,
-  CircularProgress
+  Typography
 } from '@mui/material';
-export default function Signin (props) {
-  const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const [signInData, setsignInData] = useState({
-        password: "",
-        email: ""
-  })
- const [msg, setMsg] = useState('');
- const [confirmMsg, setConfirmMsg] = useState('');
- const [isLoading, setIsLoading] = useState(false);
- const [Register, setRegister] = useState("Log In");
- 
-const onHandleChange = (e) => {
-    setsignInData({...signInData, [e.target.name]: e.target.value})
-   }
-  const onSubmit = (data) => {
-      console.log(signInData);
-    setIsLoading(true);
-    setRegister("");
-    setTimeout(() => {
-    axios
-      .post("api/user-signin", signInData)
-       .then((response) => {
-         setRegister("Log In")
-          setIsLoading(false)
-        
-        if (response.data.status === 200) {
-          setMsg(response.data.message)
-          setsignInData({
-            email: "",
-            password: "",
-          })
-          setTimeout(() => {
-            setMsg("")
-          }, 2000);
-          navigate('/home',{ state: { data:signInData } })
-          setRegister("Log in")
-          setIsLoading(false)
-         
-        }
+// import { RouterLink } from 'src/components/router-link';
+// import { Seo } from 'src/components/seo';
+// import { paths } from 'src/paths';
 
-        if (response.data.status === "failed") {
-          setMsg(response.data.message)
-          setTimeout(() => {
-            setMsg("")
-          }, 4000);
-        setRegister("Log In")
-        setIsLoading(false)
-        }
-      });
-    }, 2000);
-  };
+const initialValues = {
+  email: ''
+};
 
-    return (
-      <div className="signin-page">
-       < Box sx={{ mb:1 }} >
-          <Link 
-            to="/sign-in"
-            className="d-flex"
-            color="text.black"
-            sx={{ alignItems: 'center', }}
+// const validationSchema = Yup.object({
+//   email: Yup
+//     .string()
+//     .email('Must be a valid email')
+//     .max(255)
+//     .required('Email is required')
+// });
+
+const Page = () => {
+//   const formik = useFormik({
+//     initialValues,
+//     validationSchema,
+//     onSubmit: () => { }
+//   });
+
+  return (
+    <>
+      {/* <Seo title="Forgot Password" /> */}
+      <div>
+        <Box sx={{ mb: 4 }}>
+          <Link
+            color="text.primary"
+            // component={RouterLink}
+            // href={paths.dashboard.index}
+            sx={{
+              alignItems: 'center',
+              display: 'inline-flex'
+            }}
             underline="hover"
           >
             <SvgIcon sx={{ mr: 1 }}>
-              <ArrowLeftIcon   color='black'/>
+              <ArrowLeftIcon />
             </SvgIcon>
-            <Typography color='black' className="mb-5"  variant="h6" >
+            <Typography variant="subtitle2">
               Dashboard
             </Typography>
           </Link>
         </Box>
-
-
-        <Card elevation={2} sx={{p:3, pb:0,borderRadius: 6 }}>
+        <Card elevation={16}>
           <CardHeader
-            subheader={(
-              <Typography
-                color="text.secondary"
-                sx={{mt:1}}
-                variant="body2"
-              >
-                Don`t` have an account?
-                &nbsp;
-                <Link
-                  
-                  to="/"
-                  underline="hover"
-                  variant="subtitle2"
-                >
-                 Register
-                </Link>
-              </Typography>
-            )}
-            sx={{ pb:2 ,fontsize:20,  fontWeight:'bold'}}
-            title="Log In"
+            sx={{ pb: 0 }}
+            title="Forgot password"
           />
-          <CardContent >
-            <Form  onSubmit={handleSubmit(onSubmit)}>
-              <Stack spacing={1} sx={{pb:2}}>
-            
+          <CardContent>
+            <form
+              noValidate
+              // onSubmit={formik.handleSubmit}
+            >
               <TextField
-                size = "small"
+                autoFocus
+                // error={!!(formik.touched.email && formik.errors.email)}
+                fullWidth
+                // helperText={formik.touched.email && formik.errors.email}
+                label="Email Address"
                 name="email"
-                variant="outlined"
-                 label="Enter Email"
-                 sx={{
-                  '& .MuiFormLabel-root': {
-                    fontSize: '0.8rem',
-                    mt:'0.1rem',
-                  },
-                }}
-                 {...register("email",{ required: true,  pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
-                 onChange={onHandleChange}
-                />
-                 <Box sx={{mt:0}}>
-                  {errors.email && errors.email.type === "required" && (
-                    <span className="error-message">This is required field</span>
-                  )}
-                  {errors.email && errors.email.type === "pattern" && (
-                    <span className="error-message">Enter a valid email</span>
-                  )}
-                </Box>                                
-                <TextField
-                   size = "small"
-                  // label="Password"
-                  name="password"
-                  type="password"
-                  variant="outlined"
-                  label="Enter password"
-                  sx={{
-                    '& .MuiFormLabel-root': {
-                      fontSize: '0.8rem',
-                      mt:'0.1rem',
-                    },
-                  }}
-                 
-                 {...register("password", {
-                            required: true,
-                           minLength:6
-                        })}
-                  onChange={onHandleChange} 
-                   value={signInData.password}
-                />
-                 <Box>
-                    {errors.password && errors.password.type === "required" && (
-                      <span className="error-message">This is required field</span> 
-                    )}
-                    {errors.password && errors.password.type === "minLength" && (
-                      <span className="error-message">
-                        Password is not good.Please type more than 6 letters
-                      </span>
-                    )}
-                  </Box>        
-                
-                 
-              </Stack>
-           
-          <Typography color="red" className="d-flex justify-content-center mb-3">{msg}</Typography>
-          <Box>
-              {/* <p className="text-blue">{msg}</p> */}
-              </Box>
+                // onBlur={formik.handleBlur}
+                // onChange={formik.handleChange}
+                type="email"
+                // value={formik.values.email}
+              />
               <Button
-                className="text-center mb-3 w-100 hover-shadow d-flex align-items-center justify-content-center "
-                color="primary"
-                // onClick={onSubmitHandler}
+                fullWidth
+                size="large"
+                sx={{ mt: 2 }}
+                type="submit"
+                variant="contained"
               >
-               <span className="ml-2"> {Register } </span>
-                {isLoading ? (
-                 
-                 <CircularProgress color="inherit" size="1.4rem" />
-                ) : (
-                  <span></span>
-                )}
+                Send reset link
               </Button>
-
-              <Link 
-            to="/sign-in"
-            className="d-flex justify-content-center"
-            color="text.black"
-            underline="hover"
-          >Forget Password?</Link>
-            </Form>
-        </CardContent>
+            </form>
+          </CardContent>
         </Card>
       </div>
-    );
-  }
+    </>
+  );
+};
+
+export default Page;
