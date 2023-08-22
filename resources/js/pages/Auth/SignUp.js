@@ -50,18 +50,18 @@ const onHandleChange = (e) =>
 
 
 const verifyRecaptcha = async ( token ) => {
-    try{
-      console.log(token);
+    // try{
+    //   console.log(token);
 
-    let response = await axios.post(`api/verify-token`,{
-        secret:process.env.REACT_APP_SECRET_KEY,
-        token:token
-    });
-    return true;
-    }catch(error){
-    console.log("error ",error);
-    return false;
-    }
+    // let response = await axios.post(`/contact-us`,{
+    //     secret:process.env.REACT_APP_SECRET_KEY,
+    //     token:token
+    // });
+    // return true;
+    // }catch(error){
+    // console.log("error ",error);
+    // return false;
+    // }
 }
 const sendEmailVerification = async () => {
   try {

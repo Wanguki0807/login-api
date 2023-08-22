@@ -24,6 +24,6 @@ Route::post('second-Info', [App\Http\Controllers\UserController::class , 'second
 Route::post("user-signin", [App\Http\Controllers\UserController::class , 'userLogin']);
 Route::post("user-trial", [App\Http\Controllers\UserController::class , 'usertrial']);
 Route::get("user/{email}",[App\Http\Controllers\UserController::class , 'userDetail']);
-Route::post("verify-token", [App\Http\Controllers\UserController::class , 'verifytoken']);
+Route::post("verify-recaptcha", [App\Http\Controllers\RecaptchaController::class , 'verifyTecaptcha']);
 Route::post('verify-email', [App\Http\Controllers\Auth\VerificationController::class , 'verifyEmail']);
 // Route::post("recend-email", [App\Http\Controllers\UserController::class , 'sendEmailVerificationNotification']);
