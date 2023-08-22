@@ -31028,11 +31028,7 @@ function Signin(props) {
     Login = _useState10[0],
     setLogin = _useState10[1];
   console.log(LoginData);
-  console.log(localStorage);
   var onHandleChange = function onHandleChange(e) {
-    if (!e.target.value) {
-      e.target.value = '';
-    }
     setLoginData(_objectSpread(_objectSpread({}, LoginData), {}, _defineProperty({}, e.target.name, e.target.value)));
   };
   var onSubmit = function onSubmit(data) {
@@ -31130,6 +31126,7 @@ function Signin(props) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
               className: "title-inter",
               name: "email",
+              autoComplete: "off",
               variant: "outlined",
               label: "Enter Email",
               sx: {
@@ -31137,7 +31134,8 @@ function Signin(props) {
                   fontSize: '0.8rem',
                   mt: '0.1rem'
                 }
-              }
+              },
+              value: LoginData.email
             }, register("email", {
               required: true,
               pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -31158,6 +31156,8 @@ function Signin(props) {
               className: "title-inter",
               name: "password",
               type: "password",
+              defaultValue: "",
+              autoComplete: "off",
               variant: "outlined",
               label: "Enter password",
               sx: {
@@ -31165,8 +31165,8 @@ function Signin(props) {
                   fontSize: '0.8rem',
                   mt: '0.1rem'
                 }
-              },
-              value: LoginData.password
+              }
+              // value={LoginData.password}
             }, register("password", {
               required: true,
               minLength: 6
@@ -32093,7 +32093,7 @@ function Signup(props) {
             _context.prev = 0;
             console.log(token);
             _context.next = 4;
-            return axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/verify-token", {
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().post("api/verify-token", {
               secret: process.env.REACT_APP_SECRET_KEY,
               token: token
             });
@@ -32122,7 +32122,7 @@ function Signup(props) {
           case 0:
             _context2.prev = 0;
             _context2.next = 3;
-            return axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/verify-email');
+            return axios__WEBPACK_IMPORTED_MODULE_1___default().post('api/verify-email');
           case 3:
             console.log('Verification email sent');
             _context2.next = 9;
@@ -32141,7 +32141,6 @@ function Signup(props) {
       return _ref2.apply(this, arguments);
     };
   }();
-  console.log(signupData);
   var onSubmit = function onSubmit(data) {
     localStorage.setItem("Email", JSON.stringify(signupData.email));
     if (data.password != data.confirmpassword) {
@@ -32246,6 +32245,8 @@ function Signup(props) {
               pb: 0
             },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
+              required: true,
+              autoComplete: "off",
               className: "title-inter",
               name: "name",
               variant: "outlined",
@@ -32270,6 +32271,8 @@ function Signup(props) {
                 children: "Please check the User Name"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
+              required: true,
+              autoComplete: "off",
               className: "title-inter",
               name: "email",
               variant: "outlined",
@@ -32297,7 +32300,9 @@ function Signup(props) {
                 children: "Enter a valid email"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
+              required: true,
               className: "title-inter",
+              autoComplete: "off",
               name: "password",
               type: "password",
               variant: "outlined",
@@ -32307,8 +32312,8 @@ function Signup(props) {
                   fontSize: '0.8rem',
                   mt: '0.1rem'
                 }
-              }
-              // value={signupData.password}
+              },
+              value: signupData.password
             }, register("password", {
               required: true,
               minLength: 6
@@ -32326,7 +32331,9 @@ function Signup(props) {
                 children: "Password is not good.Please type more than 6 letters"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
+              required: true,
               className: "title-inter",
+              autoComplete: "off",
               type: "password",
               label: "Confirm Password",
               name: "confirmpassword",

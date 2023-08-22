@@ -53,7 +53,7 @@ const verifyRecaptcha = async ( token ) => {
     try{
       console.log(token);
 
-    let response = await axios.post(`/api/verify-token`,{
+    let response = await axios.post(`api/verify-token`,{
         secret:process.env.REACT_APP_SECRET_KEY,
         token:token
     });
@@ -65,13 +65,13 @@ const verifyRecaptcha = async ( token ) => {
 }
 const sendEmailVerification = async () => {
   try {
-    await axios.post('/api/verify-email');
+    await axios.post('api/verify-email');
     console.log('Verification email sent');
   } catch (error) {
     console.error('Error sending verification email', error);
   }
 };
-console.log(signupData);
+
 const onSubmit = (data) => {
 
   localStorage.setItem("Email",JSON.stringify(signupData.email));
@@ -173,10 +173,13 @@ const onSubmit = (data) => {
               <Stack spacing={0} sx={{pb:0}}>
             
                 <TextField
-                   className="title-inter"
+                    required
+                    autoComplete="off"
+                     className="title-inter"
                      name="name"
                      variant="outlined"
                      label="Enter User Name"
+                   
                      sx={{
                       '& .MuiFormLabel-root': {
                         fontSize: '0.8rem',
@@ -189,7 +192,8 @@ const onSubmit = (data) => {
             <Box sx={{mb:2,fontsize:5}}>
                 {errors.name && <span className="error-message">Please check the User Name</span>}
                 </Box>
-              <TextField
+              <TextField  required
+               autoComplete="off"
                className="title-inter"
                 name="email"
                 variant="outlined"
@@ -211,10 +215,11 @@ const onSubmit = (data) => {
                     <span className="error-message">Enter a valid email</span>
                   )}
                 </Box>                                
-                <TextField
+                <TextField  required
                    className="title-inter"
+                   autoComplete="off"
                   name="password"
-                  type="password"
+                 type={"password"}
                   variant="outlined"
                   label="Enter password"
                   sx={{
@@ -223,7 +228,7 @@ const onSubmit = (data) => {
                       mt:'0.1rem',
                     },
                   }}
-                  // value={signupData.password}
+                  value={signupData.password}
                  {...register("password", {
                             required: true,
                            minLength:6
@@ -242,9 +247,10 @@ const onSubmit = (data) => {
                     )}
                   </Box>        
                 
-                 <TextField 
+                 <TextField   required
                   className="title-inter"
-                   type="password"
+                  autoComplete="off"
+                  type={"password"}
                   label="Confirm Password"
                   name="confirmpassword"
                   variant="outlined"

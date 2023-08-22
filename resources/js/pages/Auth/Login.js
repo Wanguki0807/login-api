@@ -30,11 +30,11 @@ export default function Signin (props) {
  const [isLoading, setIsLoading] = useState(false);
  const [Login, setLogin] = useState("Log In");
  console.log(LoginData);
- console.log(localStorage);
-const onHandleChange = (e) => {
-    if(!e.target.value){e.target.value ='';}
+
+  const onHandleChange = (e) => {
     setLoginData({...LoginData, [e.target.name]: e.target.value})
    };
+
   const onSubmit = (data) => {
     console.log(LoginData);
     setIsLoading(true);
@@ -43,7 +43,7 @@ const onHandleChange = (e) => {
     axios
       .post("/api/user-signin", LoginData)
        .then((response) => {
-         setLogin("Log In")
+          setLogin("Log In")
           setIsLoading(false)
         
         if (response.data.status === 200) {
@@ -120,6 +120,7 @@ const onHandleChange = (e) => {
               <TextField 
                 className="title-inter"
                  name="email"
+                 autoComplete="off"
                  variant="outlined"
                  label="Enter Email"
                  sx={{
@@ -128,6 +129,7 @@ const onHandleChange = (e) => {
                     mt:'0.1rem',
                   },
                 }}
+                value={LoginData.email}
                  {...register("email",{ required: true,  pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
                  onChange={onHandleChange}
                 />
@@ -142,6 +144,8 @@ const onHandleChange = (e) => {
                 <TextField className="title-inter"
                   name="password"
                   type="password"
+                  defaultValue=""
+                  autoComplete="off"
                   variant="outlined"
                   label="Enter password"
                   sx={{
@@ -150,7 +154,7 @@ const onHandleChange = (e) => {
                       mt:'0.1rem',
                     },
                   }}
-                  value={LoginData.password}
+                  // value={LoginData.password}
                   {...register("password", {
                             required: true,
                            minLength:6
