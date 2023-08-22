@@ -13,9 +13,6 @@ import {
   Card,
   CardContent,
   CardHeader,
-  Checkbox,
-  FormHelperText,
-  // Link,
   Stack,
   SvgIcon,
   TextField,
@@ -50,7 +47,6 @@ const onCancel = (e) =>{
 const onSubmit = (data) =>{
     setIsLoading(true)
     setClick("")
-    setTimeout(() =>{
     axios
     .post("api/first-Info", firstInfoData)
      .then((response) => {
@@ -65,22 +61,25 @@ const onSubmit = (data) =>{
             companylocation: "",
         })
         setTimeout(() => {
-          setMsg("")          
+          setMsg("")  
+          setIsLoading(false)
+           setClick("Save Changes and NEXT")  
+          navigate('/secondInfo')
+
         }, 2000);
-        navigate('/secondInfo')
-        setIsLoading(false)
-         setClick("Save Changes and NEXT")
+      
       }
 
       if (response.data.status === "failed") {
         setMsg(response.data.message)
         setTimeout(() => {
           setMsg("");
+          setIsLoading(false)
+          setClick("Save Changes and NEXT")
+        
         }, 2000);
-        setIsLoading(false)
-        setClick("Save Changes and NEXT")
       }
-    }, 2000);
+  
     });
 
 }

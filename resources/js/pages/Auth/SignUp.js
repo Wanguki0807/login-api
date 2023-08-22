@@ -68,7 +68,7 @@ const verifyRecaptcha = () => {
     })
   }
   else{
-    alert("Please complete the reCAPTCHA");
+    // alert("Please complete the reCAPTCHA");
     return false;
   }
 }

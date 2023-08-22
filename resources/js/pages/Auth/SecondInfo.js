@@ -61,11 +61,12 @@ const onSubmit = (data) =>{
         })
         setTimeout(() => {
           setMsg("")
+          navigate('/socialHandle')
+          setIsLoading(false)
+          setClick("Save Changes and NEXT")
         }, 2000);
         
-        navigate('/socialHandle')
-        setIsLoading(false)
-        setClick("Save Changes and NEXT")
+       
       }
 
       if (response.data.status === "failed") {

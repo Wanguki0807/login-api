@@ -30396,34 +30396,32 @@ function FirstInfo(props) {
   var onSubmit = function onSubmit(data) {
     setIsLoading(true);
     setClick("");
-    setTimeout(function () {
-      axios__WEBPACK_IMPORTED_MODULE_1___default().post("api/first-Info", firstInfoData).then(function (response) {
-        if (response.data.status === 200) {
-          setMsg(response.data.message);
-          setfirstInfoData({
-            firstname: "",
-            lastname: "",
-            phonenumber: "",
-            companyname: "",
-            companywebsite: "",
-            companylocation: ""
-          });
-          setTimeout(function () {
-            setMsg("");
-          }, 2000);
+    axios__WEBPACK_IMPORTED_MODULE_1___default().post("api/first-Info", firstInfoData).then(function (response) {
+      if (response.data.status === 200) {
+        setMsg(response.data.message);
+        setfirstInfoData({
+          firstname: "",
+          lastname: "",
+          phonenumber: "",
+          companyname: "",
+          companywebsite: "",
+          companylocation: ""
+        });
+        setTimeout(function () {
+          setMsg("");
+          setIsLoading(false);
+          setClick("Save Changes and NEXT");
           navigate('/secondInfo');
+        }, 2000);
+      }
+      if (response.data.status === "failed") {
+        setMsg(response.data.message);
+        setTimeout(function () {
+          setMsg("");
           setIsLoading(false);
           setClick("Save Changes and NEXT");
-        }
-        if (response.data.status === "failed") {
-          setMsg(response.data.message);
-          setTimeout(function () {
-            setMsg("");
-          }, 2000);
-          setIsLoading(false);
-          setClick("Save Changes and NEXT");
-        }
-      }, 2000);
+        }, 2000);
+      }
     });
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -31598,10 +31596,10 @@ function SecondInfo(props) {
         });
         setTimeout(function () {
           setMsg("");
+          navigate('/socialHandle');
+          setIsLoading(false);
+          setClick("Save Changes and NEXT");
         }, 2000);
-        navigate('/socialHandle');
-        setIsLoading(false);
-        setClick("Save Changes and NEXT");
       }
       if (response.data.status === "failed") {
         setMsg(response.data.message);
@@ -32103,7 +32101,7 @@ function Signup(props) {
         return false;
       });
     } else {
-      alert("Please complete the reCAPTCHA");
+      // alert("Please complete the reCAPTCHA");
       return false;
     }
   };
