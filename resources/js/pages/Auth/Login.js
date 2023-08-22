@@ -21,7 +21,7 @@ import {
 export default function Signin (props) {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const [signInData, setsignInData] = useState({
+  const [LoginData, setLoginData] = useState({
         password: "",
         email: ""
   })
@@ -29,31 +29,33 @@ export default function Signin (props) {
  const [confirmMsg, setConfirmMsg] = useState('');
  const [isLoading, setIsLoading] = useState(false);
  const [Login, setLogin] = useState("Log In");
- 
+ console.log(LoginData);
+ console.log(localStorage);
 const onHandleChange = (e) => {
-    setsignInData({...signInData, [e.target.name]: e.target.value})
-   }
+    if(!e.target.value){e.target.value ='';}
+    setLoginData({...LoginData, [e.target.name]: e.target.value})
+   };
   const onSubmit = (data) => {
-      console.log(signInData);
+    console.log(LoginData);
     setIsLoading(true);
     setLogin("");
     setTimeout(() => {
     axios
-      .post("/api/user-signin", signInData)
+      .post("/api/user-signin", LoginData)
        .then((response) => {
          setLogin("Log In")
           setIsLoading(false)
         
         if (response.data.status === 200) {
           setMsg(response.data.message)
-          setsignInData({
+          setLoginData({
             email: "",
             password: "",
           })
           setTimeout(() => {
             setMsg("")
           }, 2000);
-          navigate('/home',{ state: { data:signInData } })
+          navigate('/home',{ state: { data:LoginData } })
           setLogin("Log in")
           setIsLoading(false)
          
@@ -115,11 +117,10 @@ const onHandleChange = (e) => {
             <Form  onSubmit={handleSubmit(onSubmit)}>
               <Stack spacing={0} sx={{pb:0}}>
             
-              <TextField className="title-inter"
-                
-                name="email"
-                variant="outlined"
-               
+              <TextField 
+                className="title-inter"
+                 name="email"
+                 variant="outlined"
                  label="Enter Email"
                  sx={{
                   '& .MuiFormLabel-root': {
@@ -149,13 +150,13 @@ const onHandleChange = (e) => {
                       mt:'0.1rem',
                     },
                   }}
-                 
-                 {...register("password", {
+                  value={LoginData.password}
+                  {...register("password", {
                             required: true,
                            minLength:6
                         })}
                   onChange={onHandleChange} 
-                   value={signInData.password}
+                   
                 />
                  <Box  sx={{mb:3}}>
                     {errors.password && errors.password.type === "required" && (
@@ -176,8 +177,6 @@ const onHandleChange = (e) => {
                 className="text-center mb-3 w-100 hover-shadow d-flex align-items-center justify-content-center rounded-6"
                 color="primary"
                 style={{ maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
-
-                // onClick={onSubmitHandler}
               >
                <span className="ml-2"> {Login } </span>
                 {isLoading ? (

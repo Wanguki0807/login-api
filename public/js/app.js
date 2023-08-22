@@ -31009,8 +31009,8 @@ function Signin(props) {
       email: ""
     }),
     _useState2 = _slicedToArray(_useState, 2),
-    signInData = _useState2[0],
-    setsignInData = _useState2[1];
+    LoginData = _useState2[0],
+    setLoginData = _useState2[1];
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
     _useState4 = _slicedToArray(_useState3, 2),
     msg = _useState4[0],
@@ -31027,20 +31027,25 @@ function Signin(props) {
     _useState10 = _slicedToArray(_useState9, 2),
     Login = _useState10[0],
     setLogin = _useState10[1];
+  console.log(LoginData);
+  console.log(localStorage);
   var onHandleChange = function onHandleChange(e) {
-    setsignInData(_objectSpread(_objectSpread({}, signInData), {}, _defineProperty({}, e.target.name, e.target.value)));
+    if (!e.target.value) {
+      e.target.value = '';
+    }
+    setLoginData(_objectSpread(_objectSpread({}, LoginData), {}, _defineProperty({}, e.target.name, e.target.value)));
   };
   var onSubmit = function onSubmit(data) {
-    console.log(signInData);
+    console.log(LoginData);
     setIsLoading(true);
     setLogin("");
     setTimeout(function () {
-      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/user-signin", signInData).then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/user-signin", LoginData).then(function (response) {
         setLogin("Log In");
         setIsLoading(false);
         if (response.data.status === 200) {
           setMsg(response.data.message);
-          setsignInData({
+          setLoginData({
             email: "",
             password: ""
           });
@@ -31049,7 +31054,7 @@ function Signin(props) {
           }, 2000);
           navigate('/home', {
             state: {
-              data: signInData
+              data: LoginData
             }
           });
           setLogin("Log in");
@@ -31160,13 +31165,13 @@ function Signin(props) {
                   fontSize: '0.8rem',
                   mt: '0.1rem'
                 }
-              }
+              },
+              value: LoginData.password
             }, register("password", {
               required: true,
               minLength: 6
             })), {}, {
-              onChange: onHandleChange,
-              value: signInData.password
+              onChange: onHandleChange
             })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
               sx: {
                 mb: 3
@@ -31190,10 +31195,7 @@ function Signin(props) {
               maxHeight: '48px',
               minWidth: '100px',
               minHeight: '48px'
-            }
-
-            // onClick={onSubmitHandler}
-            ,
+            },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
               className: "ml-2",
               children: [" ", Login, " "]
@@ -32139,6 +32141,7 @@ function Signup(props) {
       return _ref2.apply(this, arguments);
     };
   }();
+  console.log(signupData);
   var onSubmit = function onSubmit(data) {
     localStorage.setItem("Email", JSON.stringify(signupData.email));
     if (data.password != data.confirmpassword) {
@@ -32236,7 +32239,6 @@ function Signup(props) {
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_15__["default"], {
-          autoComplete: "off",
           onSubmit: handleSubmit(onSubmit),
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
             spacing: 0,
@@ -32248,9 +32250,6 @@ function Signup(props) {
               name: "name",
               variant: "outlined",
               label: "Enter User Name",
-              inputProps: {
-                autoComplete: "off"
-              },
               sx: {
                 '& .MuiFormLabel-root': {
                   fontSize: '0.8rem',
@@ -32309,12 +32308,12 @@ function Signup(props) {
                   mt: '0.1rem'
                 }
               }
+              // value={signupData.password}
             }, register("password", {
               required: true,
               minLength: 6
             })), {}, {
-              onChange: onHandleChange,
-              value: signupData.password
+              onChange: onHandleChange
             })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
               sx: {
                 mb: 2
@@ -32331,21 +32330,19 @@ function Signup(props) {
               type: "password",
               label: "Confirm Password",
               name: "confirmpassword",
-              variant: "outlined"
-              // placeholder="Confirm password"
-              ,
+              variant: "outlined",
               sx: {
                 '& .MuiFormLabel-root': {
                   fontSize: '0.8rem',
                   mt: '0.1rem'
                 }
-              }
+              },
+              value: signupData.confirmpassword
             }, register("confirmpassword", {
               required: true,
               minLength: 6
             })), {}, {
-              onChange: onHandleChange,
-              value: signupData.confirmpassword
+              onChange: onHandleChange
             })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
               sx: {
                 mb: 2

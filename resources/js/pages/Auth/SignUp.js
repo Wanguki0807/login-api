@@ -40,7 +40,7 @@ const [signupData, setSignupData] = useState({
  const [isLoading, setIsLoading] = useState(false);
  const [Register, setRegister] = useState("Register");
  const [message, setMessage] = useState("");
-const [error,setError] = useState("");
+const  [error,setError] = useState("");
 
 const onHandleChange = (e) => 
   {
@@ -71,7 +71,7 @@ const sendEmailVerification = async () => {
     console.error('Error sending verification email', error);
   }
 };
-
+console.log(signupData);
 const onSubmit = (data) => {
 
   localStorage.setItem("Email",JSON.stringify(signupData.email));
@@ -169,7 +169,7 @@ const onSubmit = (data) => {
            
           />
           <CardContent >
-            <Form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
+            <Form  onSubmit={handleSubmit(onSubmit)}>
               <Stack spacing={0} sx={{pb:0}}>
             
                 <TextField
@@ -177,9 +177,6 @@ const onSubmit = (data) => {
                      name="name"
                      variant="outlined"
                      label="Enter User Name"
-                     inputProps={{
-                      autoComplete: "off",
-                    }}
                      sx={{
                       '& .MuiFormLabel-root': {
                         fontSize: '0.8rem',
@@ -192,8 +189,8 @@ const onSubmit = (data) => {
             <Box sx={{mb:2,fontsize:5}}>
                 {errors.name && <span className="error-message">Please check the User Name</span>}
                 </Box>
-              <TextField className="title-inter"
-                
+              <TextField
+               className="title-inter"
                 name="email"
                 variant="outlined"
                  label="Enter Email"
@@ -226,13 +223,13 @@ const onSubmit = (data) => {
                       mt:'0.1rem',
                     },
                   }}
-                 
+                  // value={signupData.password}
                  {...register("password", {
                             required: true,
                            minLength:6
                         })}
                   onChange={onHandleChange} 
-                   value={signupData.password}
+
                 />
                  <Box sx={{mb:2}}>
                     {errors.password && errors.password.type === "required" && (
@@ -251,19 +248,20 @@ const onSubmit = (data) => {
                   label="Confirm Password"
                   name="confirmpassword"
                   variant="outlined"
-                  // placeholder="Confirm password"
+             
                   sx={{
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
                       mt:'0.1rem',
                     },
                   }}
+                value={signupData.confirmpassword}
                 {...register("confirmpassword", {
                     required: true,
                     minLength : 6
                 })}
                 onChange={onHandleChange}  
-                value={signupData.confirmpassword}
+               
                 />
                 <Box sx={{mb:2}}>
                     {errors.confirmpassword && errors.confirmpassword.type === "required" && (
