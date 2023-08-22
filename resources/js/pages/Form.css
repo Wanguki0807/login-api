@@ -74,7 +74,10 @@
      width:690px;
     margin:auto;
   }
-
+  .trial-page {
+    width:750px;
+   margin:auto;
+ }
   .start-page{
     width:879px;
     margin:auto;
@@ -97,6 +100,10 @@
 }
 .smallsize{
   font-Size:18px !important;
+  font-Weight:500 !important ;
+}
+.tinysize{
+  font-Size:14px !important;
   font-Weight:500 !important ;
 }
 .title-inter {

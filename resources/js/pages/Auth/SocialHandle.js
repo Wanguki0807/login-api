@@ -72,10 +72,11 @@ const onSubmit = (data) =>
             })
             setTimeout(() => {
             setMsg("")
-            }, 2000);
             setIsLoading(false)
             setClick("Save Changes and NEXT")
             navigate('/trial')
+            }, 2000);
+           
         }
 
         if (response.data.status === "failed") 
