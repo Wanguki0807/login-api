@@ -38,7 +38,7 @@ const onSubmitHandler = async(e) => {
     }
     return (
       <div className="sendEmail-page">
-         <Card elevation={2} sx={{p:3, pb:0 ,borderRadius: 5}} >
+         <Card elevation={0} sx={{p:3, pb:0 ,borderRadius: 5}} className="transparent">
           <CardHeader
             // subheader={(
             //   <Typography

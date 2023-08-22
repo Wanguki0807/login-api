@@ -233,7 +233,7 @@ const onSubmit = (data) =>{
               </Button>
              
               <Button
-                className="text-center mx-3 w-50 title-inter"
+                className="text-center mx-3 m-2 w-50 title-inter"
                 color="primary"
                 style={{maxWidth: '260px', maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
               

@@ -58,19 +58,19 @@
     min-width:200px;
   }
 
-  .signup-page{
+  .signup-page , .signin-page{
 
     width:444px;
     margin:auto;
 
   }
   .sendEmail-page{
-  
+   
     min-width:444px;
     margin:auto;
 
   }
-  .firstInfo-page, .secondInfo-page ,.social-page {
+  .firstInfo-page, .secondInfo-page ,.social-page ,.trial-page {
      width:690px;
     margin:auto;
   }
@@ -80,15 +80,7 @@
     margin:auto;
   
   }
-  .trial-page{
-    width:60%;
-    margin:auto;           
-  }
-.signin-page{
-  max-width:40%;
-  margin:auto;
-  margin-top:15%
-}
+
 .linkback, a{
   text-decoration: none;
 }
@@ -118,4 +110,7 @@
 }
 .card{
   font-Family:'Plus Jakarta Sans' !important;
+}
+.transparent{
+  background-color: #FFFFFF00 !important;
 }

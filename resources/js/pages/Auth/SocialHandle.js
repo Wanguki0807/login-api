@@ -93,28 +93,28 @@ const onSubmit = (data) =>
     return (
 
     <div className="social-page">
-        <Typography   color="primary" variant="h4" sx={{pb:2,mt:5, fontWeight:'bold',textAlign: 'center'}}>
+        <Typography   color="primary" variant="h4" sx={{pb:1 , fontWeight:'bold',textAlign: 'center'}}>
              LOGO
         </Typography>
 
-        <Card elevation={2}  sx={{p:4,mt:3 ,borderRadius: 6}} >
+        <Card elevation={2}  sx={{p:6,pt:5,mt:3 ,borderRadius: 5}} >
 
-            <CardHeader variant="h5" sx={{ p:0 ,  fontWeight:'bold',textAlign: 'center'}} className="w-100"></CardHeader>
+            <CardHeader variant="h6" sx={{ p:0 ,  fontWeight:'bold',textAlign: 'center'}} className="w-100"></CardHeader>
             
             <CardContent className="container p-0" >
 
                 <Form  onSubmit={handleSubmit(onSubmit)} >
-                    <Typography className="row"variant="h5" sx={{pb:1, pt:0, fontWeight:'bold',textAlign: 'center'}} >
+                    <Typography className="row title largesize" sx={{pb:3,textAlign: 'center'}} >
                             Social Media Handles
                     </Typography>
                     <Typography className="row" color="grey" sx={{pb:3, pt:0, fontWeight:'reqular',textAlign: 'left'}} >
                             Show case your brand and social media presence to interested influencers who may want to work with you.
                     </Typography>
                     <Stack spacing={0} sx={{pb:0}}>
-                        <div className="row">
+                        <div className="row ">
                             <div className="col-md-6 col-12">
                             <TextField 
-                                    size = "small"
+                                   className = "title-inter w-100 w-100"
                                     sx={{
                                         '& .MuiFormLabel-root': {
                                           fontSize: '0.8rem',
@@ -127,13 +127,13 @@ const onSubmit = (data) =>
                                     {...register("istogram",{required: true})}
                                     onChange={onHandleChange} 
                                 />
-                            <Box sx={{my:1}}>
+                            <Box sx={{mb:2}}>
                                 {errors.istogram && <span className="error-message">Please check the Handle</span>}
                             </Box>
                             </div>
                             <div className="col-md-6 col-12">
                             <TextField 
-                                        size = "small"
+                                        className = "title-inter w-100"
                                         sx={{
                                             '& .MuiFormLabel-root': {
                                               fontSize: '0.8rem',
@@ -146,17 +146,17 @@ const onSubmit = (data) =>
                                         {...register("tiktok",{required: true})}
                                         onChange={onHandleChange} 
                                     />
-                                <Box sx={{my:1}}>
+                                <Box sx={{mb:2}}>
                                     {errors.tiktok && <span className="error-message">Please check the Handle</span>}
                                 </Box>
                             </div>
                         </div>
                     </Stack>
                     <Stack spacing={0} sx={{pb:0}} >
-                        <div className="row">
+                        <div className="row ">
                             <div className="col-md-6 col-12">
                                 <TextField 
-                                        size = "small"
+                                        className = "title-inter w-100"
                                         sx={{
                                             '& .MuiFormLabel-root': {
                                               fontSize: '0.8rem',
@@ -169,13 +169,13 @@ const onSubmit = (data) =>
                                         {...register("youtube",{required: true})}
                                         onChange={onHandleChange} 
                                     />
-                                <Box sx={{my:1}}>
+                                <Box sx={{mb:2}}>
                                     {errors.youtube && <span className="error-message">Please check the Handle</span>}
                                 </Box>
                             </div>
                             <div className="col-md-6 col-12">
                                 <TextField 
-                                            size = "small"
+                                            className = "title-inter w-100"
                                             sx={{
                                                 '& .MuiFormLabel-root': {
                                                   fontSize: '0.8rem',
@@ -188,7 +188,7 @@ const onSubmit = (data) =>
                                             {...register("facebook",{required: true})}
                                             onChange={onHandleChange} 
                                         />
-                                <Box sx={{my:1}}>
+                                <Box sx={{mb:2}}>
                                     {errors.facebook && <span className="error-message">Please check the Handle</span>}
                                 </Box>
                             </div>
@@ -198,7 +198,7 @@ const onSubmit = (data) =>
                             <div className="row">
                                 <div className="col-md-6 col-12">
                                     <TextField 
-                                            size = "small"
+                                           className = "title-inter w-100"
                                             sx={{
                                                 '& .MuiFormLabel-root': {
                                                   fontSize: '0.8rem',
@@ -211,13 +211,13 @@ const onSubmit = (data) =>
                                             {...register("twitter",{required: true})}
                                             onChange={onHandleChange} 
                                         />
-                                    <Box sx={{my:1}}>
+                                    <Box sx={{mb:2}}>
                                         {errors.twitter && <span className="error-message">Please check the Handle</span>}
                                     </Box>
                                 </div>
                                 <div className="col-md-6 col-12">
                                         <TextField 
-                                                size = "small"
+                                               className = "title-inter w-100"
                                                 sx={{
                                                     '& .MuiFormLabel-root': {
                                                       fontSize: '0.8rem',
@@ -230,7 +230,7 @@ const onSubmit = (data) =>
                                                 {...register("pinterest",{required: true})}
                                                 onChange={onHandleChange} 
                                             />
-                                        <Box sx={{my:1}}>
+                                        <Box sx={{mb:2}}>
                                             {errors.pinterest && <span className="error-message">Please check the Handle</span>}
                                         </Box>
                                 </div>
@@ -241,7 +241,7 @@ const onSubmit = (data) =>
                             <div className="row">
                                 <div className="col-md-6 col-12">
                                         <TextField 
-                                                size = "small"
+                                               className = "title-inter w-100"
                                                 sx={{
                                                     '& .MuiFormLabel-root': {
                                                       fontSize: '0.8rem',
@@ -254,7 +254,7 @@ const onSubmit = (data) =>
                                                 {...register("linkedin",{required: true})}
                                                 onChange={onHandleChange} 
                                             />
-                                        <Box sx={{my:1}}>
+                                        <Box sx={{mb:2}}>
                                             {errors.linkedin && <span className="error-message">Please check the Handle</span>}
                                         </Box>
                                     </div>
@@ -262,7 +262,7 @@ const onSubmit = (data) =>
                             
                                <div className="col-md-6 col-12">
                                     <TextField 
-                                                size = "small"
+                                               className = "title-inter w-100"
                                                 sx={{
                                                     '& .MuiFormLabel-root': {
                                                       fontSize: '0.8rem',
@@ -275,7 +275,7 @@ const onSubmit = (data) =>
                                                 {...register("blogurl",{required: true})}
                                                 onChange={onHandleChange} 
                                             />
-                                    <Box sx={{my:1}}>
+                                    <Box sx={{mb:2}}>
                                         {errors.blogurl && <span className="error-message">Please check the Handle</span>}
                                     </Box>
                                  </div>
@@ -285,7 +285,7 @@ const onSubmit = (data) =>
                         <Typography color="red" className="d-flex justify-content-center">{msg}</Typography>
                 <div className= "row d-flex justify-content-end pt-2">
                 
-                <Button  className="text-center m-2 w-25"
+                <Button  className="text-center m-2 w-25  btn btn-outline-primary"
                     color="white"
                     onClick={onCancel}
                 >
@@ -293,14 +293,15 @@ const onSubmit = (data) =>
                 </Button>
                 
                 <Button
-                    className="text-center m-2 w-50"
+                    className="text-center m-2 w-50  mx-3 title-inter w-100"
                     color="primary"
+                    style={{maxWidth: '260px', maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
                     sx={{ pb:2,width:200 ,fontsize:20,  fontWeight:'bold'}}
                     type="submit">
                     <span className="ml-2"> {click } </span>
                         {nowLoading ? (
                         
-                        <CircularProgress color="inherit" size="1.1rem"/>
+                        <CircularProgress color="inherit" size="2rem"/>
                         ) : (
                         <span></span>
                         )}

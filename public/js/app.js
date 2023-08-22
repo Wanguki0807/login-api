@@ -30224,15 +30224,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
 /* harmony import */ var _pages_Auth_SignUp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/Auth/SignUp */ "./resources/js/pages/Auth/SignUp.js");
 /* harmony import */ var _pages_Auth_SendEmail_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Auth/SendEmail.js */ "./resources/js/pages/Auth/SendEmail.js");
 /* harmony import */ var _pages_Auth_Start__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/Auth/Start */ "./resources/js/pages/Auth/Start.js");
 /* harmony import */ var _pages_Auth_FirstInfos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/Auth/FirstInfos */ "./resources/js/pages/Auth/FirstInfos.js");
 /* harmony import */ var _pages_Auth_SocialHandle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/Auth/SocialHandle */ "./resources/js/pages/Auth/SocialHandle.js");
 /* harmony import */ var _pages_Auth_SecondInfo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/Auth/SecondInfo */ "./resources/js/pages/Auth/SecondInfo.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _pages_Auth_Trial__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/Auth/Trial */ "./resources/js/pages/Auth/Trial.js");
+/* harmony import */ var _pages_Auth_Trial__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_pages_Auth_Trial__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _pages_Auth_ForgetPassword__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/Auth/ForgetPassword */ "./resources/js/pages/Auth/ForgetPassword.js");
+/* harmony import */ var _pages_Auth_ResetPassword__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pages/Auth/ResetPassword */ "./resources/js/pages/Auth/ResetPassword.js");
+/* harmony import */ var _pages_Auth_Login__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/Auth/Login */ "./resources/js/pages/Auth/Login.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
 
 
 
@@ -30245,36 +30254,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function MyApp() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Routes, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Routes, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
       exact: true,
       path: "/",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_SignUp__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_SignUp__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
       path: "/SendEmail",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_SendEmail_js__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_SendEmail_js__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
       path: "/Start",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_Start__WEBPACK_IMPORTED_MODULE_4__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_Start__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
       path: "/FirstInfo",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_FirstInfos__WEBPACK_IMPORTED_MODULE_5__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_FirstInfos__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
       path: "/SecondInfo",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_SecondInfo__WEBPACK_IMPORTED_MODULE_7__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_SecondInfo__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
       path: "/SocialHandle",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_SocialHandle__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_SocialHandle__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
       path: "/verify-email",
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_pages_Auth_Start__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_Start__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+      path: "/trial",
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)((_pages_Auth_Trial__WEBPACK_IMPORTED_MODULE_8___default()), {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+      path: "/Sign-in",
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_Login__WEBPACK_IMPORTED_MODULE_11__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+      path: "/ForgetPassword",
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_ForgetPassword__WEBPACK_IMPORTED_MODULE_9__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Route, {
+      path: "/ResetPassword",
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_pages_Auth_ResetPassword__WEBPACK_IMPORTED_MODULE_10__["default"], {})
     })]
   });
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);
 if (document.getElementById('app')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.BrowserRouter, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(MyApp, {})
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_14__.BrowserRouter, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(MyApp, {})
   }), document.getElementById('app'));
 }
 
@@ -30617,7 +30638,7 @@ function FirstInfo(props) {
               onClick: onCancel,
               children: "Cancel"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              className: "text-center mx-3 w-50 title-inter",
+              className: "text-center mx-3 m-2 w-50 title-inter",
               color: "primary",
               style: {
                 maxWidth: '260px',
@@ -30640,6 +30661,834 @@ function FirstInfo(props) {
                 size: "2rem"
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {})]
             })]
+          })]
+        })
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/pages/Auth/ForgetPassword.js":
+/*!***************************************************!*\
+  !*** ./resources/js/pages/Auth/ForgetPassword.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Signin)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Form.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Button.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Form.css */ "./resources/js/pages/Form.css");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.mjs");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var _untitled_ui_icons_react_build_esm_ArrowLeft__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @untitled-ui/icons-react/build/esm/ArrowLeft */ "./node_modules/@untitled-ui/icons-react/build/esm/ArrowLeft.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/SvgIcon/SvgIcon.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Card/Card.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardHeader/CardHeader.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardContent/CardContent.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CircularProgress/CircularProgress.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+function Signin(props) {
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useNavigate)();
+  var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_6__.useForm)(),
+    register = _useForm.register,
+    handleSubmit = _useForm.handleSubmit,
+    errors = _useForm.formState.errors;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      password: "",
+      email: ""
+    }),
+    _useState2 = _slicedToArray(_useState, 2),
+    signInData = _useState2[0],
+    setsignInData = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState4 = _slicedToArray(_useState3, 2),
+    msg = _useState4[0],
+    setMsg = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState6 = _slicedToArray(_useState5, 2),
+    confirmMsg = _useState6[0],
+    setConfirmMsg = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    isLoading = _useState8[0],
+    setIsLoading = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Log In"),
+    _useState10 = _slicedToArray(_useState9, 2),
+    Register = _useState10[0],
+    setRegister = _useState10[1];
+  var onHandleChange = function onHandleChange(e) {
+    setsignInData(_objectSpread(_objectSpread({}, signInData), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+  var onSubmit = function onSubmit(data) {
+    console.log(signInData);
+    setIsLoading(true);
+    setRegister("");
+    setTimeout(function () {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("api/user-signin", signInData).then(function (response) {
+        setRegister("Log In");
+        setIsLoading(false);
+        if (response.data.status === 200) {
+          setMsg(response.data.message);
+          setsignInData({
+            email: "",
+            password: ""
+          });
+          setTimeout(function () {
+            setMsg("");
+          }, 2000);
+          navigate('/home', {
+            state: {
+              data: signInData
+            }
+          });
+          setRegister("Log in");
+          setIsLoading(false);
+        }
+        if (response.data.status === "failed") {
+          setMsg(response.data.message);
+          setTimeout(function () {
+            setMsg("");
+          }, 4000);
+          setRegister("Log In");
+          setIsLoading(false);
+        }
+      });
+    }, 2000);
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    className: "signin-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      sx: {
+        mb: 1
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+        to: "/sign-in",
+        className: "d-flex",
+        color: "text.black",
+        sx: {
+          alignItems: 'center'
+        },
+        underline: "hover",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          sx: {
+            mr: 1
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_untitled_ui_icons_react_build_esm_ArrowLeft__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            color: "black"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          color: "black",
+          className: "mb-5",
+          variant: "h6",
+          children: "Dashboard"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      elevation: 2,
+      sx: {
+        p: 3,
+        pb: 0,
+        borderRadius: 6
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        subheader: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          color: "text.secondary",
+          sx: {
+            mt: 1
+          },
+          variant: "body2",
+          children: ["Don`t` have an account? \xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+            to: "/",
+            underline: "hover",
+            variant: "subtitle2",
+            children: "Register"
+          })]
+        }),
+        sx: {
+          pb: 2,
+          fontsize: 20,
+          fontWeight: 'bold'
+        },
+        title: "Log In"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          onSubmit: handleSubmit(onSubmit),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            spacing: 1,
+            sx: {
+              pb: 2
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
+              size: "small",
+              name: "email",
+              variant: "outlined",
+              label: "Enter Email",
+              sx: {
+                '& .MuiFormLabel-root': {
+                  fontSize: '0.8rem',
+                  mt: '0.1rem'
+                }
+              }
+            }, register("email", {
+              required: true,
+              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            })), {}, {
+              onChange: onHandleChange
+            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              sx: {
+                mt: 0
+              },
+              children: [errors.email && errors.email.type === "required" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "This is required field"
+              }), errors.email && errors.email.type === "pattern" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "Enter a valid email"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
+              size: "small"
+              // label="Password"
+              ,
+              name: "password",
+              type: "password",
+              variant: "outlined",
+              label: "Enter password",
+              sx: {
+                '& .MuiFormLabel-root': {
+                  fontSize: '0.8rem',
+                  mt: '0.1rem'
+                }
+              }
+            }, register("password", {
+              required: true,
+              minLength: 6
+            })), {}, {
+              onChange: onHandleChange,
+              value: signInData.password
+            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              children: [errors.password && errors.password.type === "required" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "This is required field"
+              }), errors.password && errors.password.type === "minLength" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "Password is not good.Please type more than 6 letters"
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            color: "red",
+            className: "d-flex justify-content-center mb-3",
+            children: msg
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
+            className: "text-center mb-3 w-100 hover-shadow d-flex align-items-center justify-content-center ",
+            color: "primary"
+            // onClick={onSubmitHandler}
+            ,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+              className: "ml-2",
+              children: [" ", Register, " "]
+            }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+              color: "inherit",
+              size: "1.4rem"
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+            to: "/sign-in",
+            className: "d-flex justify-content-center",
+            color: "text.black",
+            underline: "hover",
+            children: "Forget Password?"
+          })]
+        })
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/pages/Auth/Login.js":
+/*!******************************************!*\
+  !*** ./resources/js/pages/Auth/Login.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Signin)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Form.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Button.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Form.css */ "./resources/js/pages/Form.css");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.mjs");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var _untitled_ui_icons_react_build_esm_ArrowLeft__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @untitled-ui/icons-react/build/esm/ArrowLeft */ "./node_modules/@untitled-ui/icons-react/build/esm/ArrowLeft.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/SvgIcon/SvgIcon.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Card/Card.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardHeader/CardHeader.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardContent/CardContent.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CircularProgress/CircularProgress.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+function Signin(props) {
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useNavigate)();
+  var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_6__.useForm)(),
+    register = _useForm.register,
+    handleSubmit = _useForm.handleSubmit,
+    errors = _useForm.formState.errors;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      password: "",
+      email: ""
+    }),
+    _useState2 = _slicedToArray(_useState, 2),
+    signInData = _useState2[0],
+    setsignInData = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState4 = _slicedToArray(_useState3, 2),
+    msg = _useState4[0],
+    setMsg = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState6 = _slicedToArray(_useState5, 2),
+    confirmMsg = _useState6[0],
+    setConfirmMsg = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    isLoading = _useState8[0],
+    setIsLoading = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Log In"),
+    _useState10 = _slicedToArray(_useState9, 2),
+    Login = _useState10[0],
+    setLogin = _useState10[1];
+  var onHandleChange = function onHandleChange(e) {
+    setsignInData(_objectSpread(_objectSpread({}, signInData), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+  var onSubmit = function onSubmit(data) {
+    console.log(signInData);
+    setIsLoading(true);
+    setLogin("");
+    setTimeout(function () {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/user-signin", signInData).then(function (response) {
+        setLogin("Log In");
+        setIsLoading(false);
+        if (response.data.status === 200) {
+          setMsg(response.data.message);
+          setsignInData({
+            email: "",
+            password: ""
+          });
+          setTimeout(function () {
+            setMsg("");
+          }, 2000);
+          navigate('/home', {
+            state: {
+              data: signInData
+            }
+          });
+          setLogin("Log in");
+          setIsLoading(false);
+        }
+        if (response.data.status === "failed") {
+          setMsg(response.data.message);
+          setTimeout(function () {
+            setMsg("");
+          }, 4000);
+          setLogin("Log In");
+          setIsLoading(false);
+        }
+      });
+    }, 2000);
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    className: "signin-page align-items-center",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      sx: {
+        mb: 1
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+        to: "/Dashboard",
+        className: "d-flex align-items-center mb-4",
+        color: "interit",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          sx: {
+            hegiht: 15
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_untitled_ui_icons_react_build_esm_ArrowLeft__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            color: "black",
+            variant: "small"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          color: "black",
+          className: "linkback ms-2 ",
+          variant: "body1",
+          children: "Dashboard"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      elevation: 16,
+      sx: {
+        borderRadius: 5
+      },
+      className: "card  px-4 pt-4 pb-3",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        className: " smalltitle mt-2",
+        varient: "h6",
+        title: "Log In",
+        subheader: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          color: "text.secondary",
+          sx: {
+            mt: 1
+          },
+          variant: "body2",
+          children: ["Don`t` have an account? \xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+            to: "/",
+            underline: "hover",
+            variant: "subtitle2",
+            children: "Register"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          onSubmit: handleSubmit(onSubmit),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            spacing: 0,
+            sx: {
+              pb: 0
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
+              className: "title-inter"
+              // size="Medium*"
+              ,
+              name: "email",
+              variant: "outlined",
+              inputProps: {
+                autoComplete: "off"
+              },
+              label: "Enter Email",
+              sx: {
+                '& .MuiFormLabel-root': {
+                  fontSize: '0.8rem',
+                  mt: '0.1rem'
+                }
+              }
+            }, register("email", {
+              required: true,
+              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            })), {}, {
+              onChange: onHandleChange
+            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              sx: {
+                mb: 3
+              },
+              children: [errors.email && errors.email.type === "required" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "This is required field"
+              }), errors.email && errors.email.type === "pattern" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "Enter a valid email"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
+              className: "title-inter"
+              //   size = "medium*"
+              // label="Password"
+              ,
+              name: "password",
+              type: "password",
+              variant: "outlined",
+              label: "Enter password",
+              sx: {
+                '& .MuiFormLabel-root': {
+                  fontSize: '0.8rem',
+                  mt: '0.1rem'
+                }
+              }
+            }, register("password", {
+              required: true,
+              minLength: 6
+            })), {}, {
+              onChange: onHandleChange,
+              value: signInData.password
+            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              sx: {
+                mb: 3
+              },
+              children: [errors.password && errors.password.type === "required" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "This is required field"
+              }), errors.password && errors.password.type === "minLength" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "Password is not good.Please type more than 6 letters"
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            color: "red",
+            className: "d-flex justify-content-center mb-3",
+            children: msg
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
+            className: "text-center mb-3 w-100 hover-shadow d-flex align-items-center justify-content-center rounded-6",
+            color: "primary",
+            style: {
+              maxHeight: '48px',
+              minWidth: '100px',
+              minHeight: '48px'
+            }
+
+            // onClick={onSubmitHandler}
+            ,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+              className: "ml-2",
+              children: [" ", Login, " "]
+            }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+              color: "inherit",
+              size: "2rem"
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+            to: "/ForgetPassword",
+            className: "d-flex justify-content-center",
+            color: "text.black",
+            underline: "hover",
+            children: "Forget Password?"
+          })]
+        })
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/pages/Auth/ResetPassword.js":
+/*!**************************************************!*\
+  !*** ./resources/js/pages/Auth/ResetPassword.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Signin)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Form.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Button.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Form.css */ "./resources/js/pages/Form.css");
+/* harmony import */ var react_hook_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-hook-form */ "./node_modules/react-hook-form/dist/index.esm.mjs");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var _untitled_ui_icons_react_build_esm_ArrowLeft__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @untitled-ui/icons-react/build/esm/ArrowLeft */ "./node_modules/@untitled-ui/icons-react/build/esm/ArrowLeft.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/SvgIcon/SvgIcon.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Card/Card.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardHeader/CardHeader.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardContent/CardContent.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/TextField/TextField.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CircularProgress/CircularProgress.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+function Signin(props) {
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useNavigate)();
+  var _useForm = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_6__.useForm)(),
+    register = _useForm.register,
+    handleSubmit = _useForm.handleSubmit,
+    errors = _useForm.formState.errors;
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+      password: "",
+      email: ""
+    }),
+    _useState2 = _slicedToArray(_useState, 2),
+    signInData = _useState2[0],
+    setsignInData = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState4 = _slicedToArray(_useState3, 2),
+    msg = _useState4[0],
+    setMsg = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState6 = _slicedToArray(_useState5, 2),
+    confirmMsg = _useState6[0],
+    setConfirmMsg = _useState6[1];
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState8 = _slicedToArray(_useState7, 2),
+    isLoading = _useState8[0],
+    setIsLoading = _useState8[1];
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Reset"),
+    _useState10 = _slicedToArray(_useState9, 2),
+    pass = _useState10[0],
+    setPasswrod = _useState10[1];
+  var onHandleChange = function onHandleChange(e) {
+    setsignInData(_objectSpread(_objectSpread({}, pass), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+  var onSubmit = function onSubmit(data) {
+    if (pass.password != pass.confirm) {
+      setConfirmMsg("Confirm Password Error");
+      return;
+    }
+    console.log(password);
+    setIsLoading(true);
+    setRegister("");
+    setTimeout(function () {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post("http://localhost:8000/api/user-signin", signInData).then(function (response) {
+        setRegister("Log In");
+        setIsLoading(false);
+        if (response.data.status === 200) {
+          setMsg(response.data.message);
+          setsignInData({
+            email: "",
+            password: ""
+          });
+          setTimeout(function () {
+            setMsg("");
+          }, 2000);
+          navigate('/home', {
+            state: {
+              data: signInData
+            }
+          });
+          setRegister("Log in");
+          setIsLoading(false);
+        }
+        if (response.data.status === "failed") {
+          setMsg(response.data.message);
+          setTimeout(function () {
+            setMsg("");
+          }, 4000);
+          setRegister("Log In");
+          setIsLoading(false);
+        }
+      });
+    }, 2000);
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    className: "signin-page",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      sx: {
+        mb: 1
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+        to: "/sign-in",
+        className: "d-flex",
+        color: "text.black",
+        sx: {
+          alignItems: 'center'
+        },
+        underline: "hover",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          sx: {
+            mr: 1
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_untitled_ui_icons_react_build_esm_ArrowLeft__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            color: "black"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          color: "black",
+          className: "mb-5",
+          variant: "h6",
+          children: "Dashboard"
+        })]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      elevation: 2,
+      sx: {
+        p: 3,
+        pb: 0,
+        borderRadius: 6
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        subheader: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          color: "text.secondary",
+          sx: {
+            mt: 1
+          },
+          variant: "body2",
+          children: ["Don`t` have an account? \xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+            to: "/",
+            underline: "hover",
+            variant: "subtitle2",
+            children: "Register"
+          })]
+        }),
+        sx: {
+          pb: 2,
+          fontsize: 20,
+          fontWeight: 'bold'
+        },
+        title: "Log In"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          onSubmit: handleSubmit(onSubmit),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            spacing: 1,
+            sx: {
+              pb: 2
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
+              size: "small",
+              name: "password",
+              variant: "outlined",
+              label: "Password",
+              sx: {
+                '& .MuiFormLabel-root': {
+                  fontSize: '0.8rem',
+                  mt: '0.1rem'
+                }
+              }
+            }, register("password", {
+              required: true,
+              pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            })), {}, {
+              onChange: onHandleChange
+            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              children: [errors.confirm && errors.confirm.type === "required" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "This is required field"
+              }), errors.confirm && errors.confirm.type === "minLength" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "Password is not good.Please type more than 6 letters"
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], _objectSpread(_objectSpread({
+              size: "confirm"
+              // label="Password"
+              ,
+              name: "confirm",
+              type: "confirm",
+              variant: "outlined",
+              label: "Confirm password",
+              sx: {
+                '& .MuiFormLabel-root': {
+                  fontSize: '0.8rem',
+                  mt: '0.1rem'
+                }
+              }
+            }, register("confirm", {
+              required: true,
+              minLength: 6
+            })), {}, {
+              onChange: onHandleChange,
+              value: signInData.password
+            })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+              children: [errors.confirm && errors.confirm.type === "required" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "This is required field"
+              }), errors.confirm && errors.confirm.type === "minLength" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+                className: "error-message",
+                children: "Password is not good.Please type more than 6 letters"
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+            color: "red",
+            className: "d-flex justify-content-center mb-3",
+            children: msg
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_17__["default"], {
+            className: "text-center mb-3 w-100 hover-shadow d-flex align-items-center justify-content-center ",
+            color: "primary"
+            // onClick={onSubmitHandler}
+            ,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+              className: "ml-2",
+              children: [" ", Register, " "]
+            }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+              color: "inherit",
+              size: "1.4rem"
+            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+            to: "/sign-in",
+            className: "d-flex justify-content-center",
+            color: "text.black",
+            underline: "hover",
+            children: "Forget Password?"
           })]
         })
       })]
@@ -30776,6 +31625,7 @@ function SecondInfo(props) {
       variant: "h4",
       sx: {
         pb: 1,
+        fontWeight: 'bold',
         textAlign: 'center'
       },
       children: "LOGO"
@@ -30783,11 +31633,12 @@ function SecondInfo(props) {
       elevation: 2,
       sx: {
         p: 6,
+        pt: 5,
         mt: 3,
         borderRadius: 5
       },
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        variant: "h5",
+        variant: "h6",
         sx: {
           p: 0,
           fontWeight: 'bold',
@@ -30952,7 +31803,7 @@ function SecondInfo(props) {
               onClick: onCancel,
               children: "Cancel"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              className: "text-center m-2 w-50",
+              className: "text-center m-2 mx-3 w-50 title-inter",
               style: {
                 maxWidth: '260px',
                 maxHeight: '48px',
@@ -31066,12 +31917,13 @@ function EmailVerify(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "sendEmail-page",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      elevation: 2,
+      elevation: 0,
       sx: {
         p: 3,
         pb: 0,
         borderRadius: 5
       },
+      className: "transparent",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"]
       // subheader={(
       //   <Typography
@@ -31381,7 +32233,7 @@ function Signup(props) {
         subheader: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
           color: "text.secondary",
           sx: {
-            mt: 0
+            mt: 1
           },
           varient: "body2",
           children: ["Already have an account? \xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
@@ -31400,7 +32252,7 @@ function Signup(props) {
               pb: 0
             },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
-              size: "Medium*",
+              className: "title-inter",
               name: "name",
               variant: "outlined",
               label: "Enter User Name",
@@ -31427,8 +32279,7 @@ function Signup(props) {
                 children: "Please check the User Name"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
-              className: "txtfield",
-              size: "medium",
+              className: "title-inter",
               name: "email",
               variant: "outlined",
               label: "Enter Email",
@@ -31455,9 +32306,7 @@ function Signup(props) {
                 children: "Enter a valid email"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
-              size: "medium"
-              // label="Password"
-              ,
+              className: "title-inter",
               name: "password",
               type: "password",
               variant: "outlined",
@@ -31486,7 +32335,7 @@ function Signup(props) {
                 children: "Password is not good.Please type more than 6 letters"
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
-              size: "medium",
+              className: "title-inter",
               type: "password",
               label: "Confirm Password",
               name: "confirmpassword",
@@ -31706,8 +32555,7 @@ function SocialHandle(props) {
       color: "primary",
       variant: "h4",
       sx: {
-        pb: 2,
-        mt: 5,
+        pb: 1,
         fontWeight: 'bold',
         textAlign: 'center'
       },
@@ -31715,12 +32563,13 @@ function SocialHandle(props) {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
       elevation: 2,
       sx: {
-        p: 4,
+        p: 6,
+        pt: 5,
         mt: 3,
-        borderRadius: 6
+        borderRadius: 5
       },
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        variant: "h5",
+        variant: "h6",
         sx: {
           p: 0,
           fontWeight: 'bold',
@@ -31732,12 +32581,9 @@ function SocialHandle(props) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
           onSubmit: handleSubmit(onSubmit),
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            className: "row",
-            variant: "h5",
+            className: "row title largesize",
             sx: {
-              pb: 1,
-              pt: 0,
-              fontWeight: 'bold',
+              pb: 3,
               textAlign: 'center'
             },
             children: "Social Media Handles"
@@ -31757,11 +32603,11 @@ function SocialHandle(props) {
               pb: 0
             },
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-              className: "row",
+              className: "row ",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100 w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31777,7 +32623,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.istogram && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -31787,7 +32633,7 @@ function SocialHandle(props) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31803,7 +32649,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.tiktok && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -31818,11 +32664,11 @@ function SocialHandle(props) {
               pb: 0
             },
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-              className: "row",
+              className: "row ",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31838,7 +32684,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.youtube && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -31848,7 +32694,7 @@ function SocialHandle(props) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31864,7 +32710,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.facebook && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -31883,7 +32729,7 @@ function SocialHandle(props) {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31899,7 +32745,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.twitter && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -31909,7 +32755,7 @@ function SocialHandle(props) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31925,7 +32771,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.pinterest && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -31944,7 +32790,7 @@ function SocialHandle(props) {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31960,7 +32806,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.linkedin && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -31970,7 +32816,7 @@ function SocialHandle(props) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                 className: "col-md-6 col-12",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
-                  size: "small",
+                  className: "title-inter w-100",
                   sx: {
                     '& .MuiFormLabel-root': {
                       fontSize: '0.8rem',
@@ -31986,7 +32832,7 @@ function SocialHandle(props) {
                   onChange: onHandleChange
                 })), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
                   sx: {
-                    my: 1
+                    mb: 2
                   },
                   children: errors.blogurl && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                     className: "error-message",
@@ -32002,13 +32848,19 @@ function SocialHandle(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "row d-flex justify-content-end pt-2",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              className: "text-center m-2 w-25",
+              className: "text-center m-2 w-25  btn btn-outline-primary",
               color: "white",
               onClick: onCancel,
               children: "Cancel"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-              className: "text-center m-2 w-50",
+              className: "text-center m-2 w-50  mx-3 title-inter w-100",
               color: "primary",
+              style: {
+                maxWidth: '260px',
+                maxHeight: '48px',
+                minWidth: '100px',
+                minHeight: '48px'
+              },
               sx: {
                 pb: 2,
                 width: 200,
@@ -32021,7 +32873,7 @@ function SocialHandle(props) {
                 children: [" ", click, " "]
               }), nowLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
                 color: "inherit",
-                size: "1.1rem"
+                size: "2rem"
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {})]
             })]
           })]
@@ -32180,9 +33032,6 @@ function Start(props) {
               className: "text-center m-2 w-25 btn btn-outline-primary ",
               size: "medium",
               color: "white",
-              sx: {
-                borderColor: 'primary.main'
-              },
               onClick: onLaterClicked,
               children: "Do it later"
             })]
@@ -32194,6 +33043,206 @@ function Start(props) {
     })]
   });
 }
+
+/***/ }),
+
+/***/ "./resources/js/pages/Auth/Trial.js":
+/*!******************************************!*\
+  !*** ./resources/js/pages/Auth/Trial.js ***!
+  \******************************************/
+/***/ (() => {
+
+// import { Component, useState } from "react";
+// import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+// import axios from "axios";
+// import "../Form.css";
+// import { useNavigate } from 'react-router-dom';
+// import {ReactComponent as ReactCheck} from "../../Assets/SVG/check-20.svg";
+// import {
+//   Card,
+//   CardContent,
+//   CardHeader,
+//   Avatar,
+//   Typography,
+
+// } from '@mui/material';
+// export default function Trial (props) {
+// const [click,setclick] = useState("start trial");
+// const [curtrial, setTrial] = useState({
+//     trial:"",
+//     email:"",
+//     });
+// const curEmail = JSON.parse(localStorage.getItem('Email')); 
+// const navigate = useNavigate();
+// const  onFreeClicked =(e) =>{
+//     setclick("Start Free Trial");
+
+//   }
+//   const  onStandardClicked =(e) =>{
+
+//   }
+
+//     return (
+//       <div className="trial-page">
+//          <Typography   color="primary" variant="h4" sx={{pb:2,m:1, fontWeight:'bold',textAlign: 'center'}}>
+//           LOGO
+//              </Typography>
+//         <div className="row">
+//           <div className="col-md-6 col-12 pr-2">
+//             <Card className=" shadow-lg" elevation={2}  sx={{p:2 ,borderRadius: 5}}  >
+//             <CardHeader variant="h6"avatar={<Avatar alt="Apple" src="../../Assets/SVG/logo.svg" />}sx={{ pb:0 ,  fontWeight:'bold',textAlign: 'center'}}  className="w-100"
+//               >
+//             </CardHeader>
+
+//             <CardContent className="d-flex">
+//                 <div className=" w-100" >
+//                 <Typography  variant="h5" sx={{pb:0 ,  fontWeight:'bold',textAlign: 'left'}} >
+//                        $0
+//                 </Typography>
+//                 <Typography  variant="h6" sx={{pb:0, fontWeight:'bold',textAlign: 'left'}}>
+//                     Free trial
+//                 </Typography>
+//                 <Typography  color="text.secondary"  sx={{pb:1 ,   fontWeight:'regular',textAlign: 'left'}}>
+//                 To familiarize yourself with our tools
+//                 </Typography>
+//                 <hr></hr>
+//                 <div className="col">  
+//                     <div className="d-flex justify-content-start justify-items-center">
+//                         <ReactCheck className="me-2"/>
+//                         <p className="mb-2 pb-2">Access the Influencer Analyzer(Limited)</p>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start  justify-items-center">
+//                     <ReactCheck  className="me-2"/>
+//                         <p className="mb-2 pb-2">Access the Influencer Finder(Limited)</p>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Messaging System(Limited)</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Job Board</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Location</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Total Reach Count</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck className="me-2" />
+//                         <Typography className="mb-2 pb-2">Engagement Rate</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Compensation Method</Typography>
+//                     </div>
+
+//                     <div className= "d-flex justify-content-center mt-3">
+//                         <Button
+//                             className="text-center m-2 w-100 btn btn-outline-primary"
+//                             color="inherit"
+//                             sx={{ pb:2,  fontWeight:'bold'}}
+//                             onClick = {onFreeClicked}
+//                         >Start Free trial
+
+//                         </Button>
+//                     </div>
+//                 </div>
+//                 </div>
+
+//             </CardContent>
+//             </Card>
+//             </div>
+//             <div className="col-md-6 col-12 pl-2">
+//             <Card className=" shadow-lg" elevation={16}  sx={{p:2,borderRadius: 6}}  >
+//             <CardHeader variant="h6"avatar={<Avatar alt="Apple" src="../public/logo192.png" />}sx={{ pb:0 ,  fontWeight:'bold',textAlign: 'center'}}  className="w-100"
+//               >
+//             </CardHeader>
+
+//             <CardContent className="d-flex">
+//                 <div className=" w-100" >
+//                 <Typography  variant="h5" sx={{pb:0 ,  fontWeight:'bold',textAlign: 'left'}} >
+//                        $99
+//                 </Typography>
+//                 <Typography  variant="h6" sx={{pb:0, fontWeight:'bold',textAlign: 'left'}}>
+//                     Standard trial
+//                 </Typography>
+//                 <Typography  color="text.secondary"  sx={{pb:1 ,   fontWeight:'regular',textAlign: 'left'}}>
+//                 To familiarize yourself with our tools
+//                 </Typography>
+//                 <hr></hr>
+//                 <div className="col">  
+//                 <div className="d-flex justify-content-start justify-items-center">
+//                     <ReactCheck className="me-2"/>
+//                         <p className="mb-2 pb-2">Access the Influencer Analyzer(Full)</p>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start  justify-items-center">
+//                     <ReactCheck  className="me-2"/>
+//                         <p className="mb-2 pb-2">Access the Influencer Finder(Full)</p>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Messaging System(Full)</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Job Board</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Compaign Management</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck  className="me-2"/>
+//                         <Typography className="mb-2 pb-2">Perfermance Tracking</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck className="me-2" />
+//                         <Typography className="mb-2 pb-2">Reporting</Typography>
+//                     </div>
+
+//                     <div className="d-flex justify-content-start">
+//                     <ReactCheck className="me-2" />
+//                         <Typography className="mb-2 pb-2" >Etc...</Typography>
+//                     </div>
+
+//                     <div className= "d-flex justify-content-center mt-3">
+//                         <Button
+//                             className="text-center m-2 w-100 btn btn-outline-primary"
+//                             color="inherit"
+//                             sx={{ pb:2,  fontWeight:'bold'}}
+//                             onClick = {onStandardClicked}
+//                         >
+//                    Start Standard Trial
+
+//                         </Button>
+//                     </div>
+//                 </div>
+//                 </div>
+
+//             </CardContent>
+//             </Card>
+//             </div>
+//         </div>
+//       </div>
+//     );
+//   }
 
 /***/ }),
 
@@ -36767,7 +37816,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_Assets_SVG_gradient_bg_svg__WEBPACK_IMPORTED_MODULE_2__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_Assets_png_person_standing_png__WEBPACK_IMPORTED_MODULE_3__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n#app{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-repeat:no-repeat;\r\n  display:flex;\r\n  height:100%;\r\n}\r\n\r\n.containers {\r\n    background-color: rgb(255, 255, 255);\r\n    padding: 20px 40px;\r\n    color: #fff;\r\n    font-weight: 600;\r\n    border: solid 1px;\r\n    border-radius:3%;\r\n    box-shadow: 7px -8px 11px -5px rgba(#195190FF);\r\n}\r\n.Tab{\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.signUp, .signIn{\r\n    background-color: #A2A2A1FF;\r\n    width:50%;\r\n    font-size: 22px;\r\n    color: #201f1f;\r\n    padding: 10px;\r\n    text-align: center;\r\n}\r\n.signIn:hover, .signUp:hover {\r\n    text-decoration: none;\r\n    color: #fff;\r\n}\r\n.activeLink{\r\n    color: #fff;\r\n    background-color: #195190FF;\r\n}\r\n.border-radiusImportant{\r\n    border-radius: 5px !important;\r\n  }\r\n  .error-message{\r\n    color:red;\r\n    font-size:13px;\r\n  }\r\n  .text-blue{\r\n    color:blue;\r\n    text-align: center;\r\n    font-weight:'bold';\r\n  }\r\n  /* .sendEmail-card{\r\n    padding-top:100px;\r\n  } */\r\n  .left-img{\r\n     background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + "); \r\n     background-size: cover;\r\n\r\n    min-width:200px;\r\n  }\r\n\r\n  .signup-page{\r\n\r\n    width:444px;\r\n    margin:auto;\r\n\r\n  }\r\n  .sendEmail-page{\r\n  \r\n    min-width:444px;\r\n    margin:auto;\r\n\r\n  }\r\n  .firstInfo-page, .secondInfo-page ,.social-page {\r\n     width:690px;\r\n    margin:auto;\r\n  }\r\n\r\n  .start-page{\r\n    width:879px;\r\n    margin:auto;\r\n  \r\n  }\r\n  .trial-page{\r\n    width:60%;\r\n    margin:auto;           \r\n  }\r\n.signin-page{\r\n  max-width:40%;\r\n  margin:auto;\r\n  margin-top:15%\r\n}\r\n.linkback, a{\r\n  text-decoration: none;\r\n}\r\n.title {\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n }\r\n .largesize{ \r\n  font-Size:32px !important;\r\n  font-Weight:700 !important ;\r\n}\r\n.bigsize{\r\n  font-Size:32px !important;\r\n  font-Weight:600 !important ;\r\n}\r\n.smallsize{\r\n  font-Size:18px !important;\r\n  font-Weight:500 !important ;\r\n}\r\n.title-inter {\r\n  font-Family:'inter' !important;\r\n }\r\n.smalltitle .MuiCardHeader-title{\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n  font-Size:18px !important;\r\n  font-Weight:700 !important ;\r\n\r\n}\r\n.card{\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n#app{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-repeat:no-repeat;\r\n  display:flex;\r\n  height:100%;\r\n}\r\n\r\n.containers {\r\n    background-color: rgb(255, 255, 255);\r\n    padding: 20px 40px;\r\n    color: #fff;\r\n    font-weight: 600;\r\n    border: solid 1px;\r\n    border-radius:3%;\r\n    box-shadow: 7px -8px 11px -5px rgba(#195190FF);\r\n}\r\n.Tab{\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.signUp, .signIn{\r\n    background-color: #A2A2A1FF;\r\n    width:50%;\r\n    font-size: 22px;\r\n    color: #201f1f;\r\n    padding: 10px;\r\n    text-align: center;\r\n}\r\n.signIn:hover, .signUp:hover {\r\n    text-decoration: none;\r\n    color: #fff;\r\n}\r\n.activeLink{\r\n    color: #fff;\r\n    background-color: #195190FF;\r\n}\r\n.border-radiusImportant{\r\n    border-radius: 5px !important;\r\n  }\r\n  .error-message{\r\n    color:red;\r\n    font-size:13px;\r\n  }\r\n  .text-blue{\r\n    color:blue;\r\n    text-align: center;\r\n    font-weight:'bold';\r\n  }\r\n  /* .sendEmail-card{\r\n    padding-top:100px;\r\n  } */\r\n  .left-img{\r\n     background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + "); \r\n     background-size: cover;\r\n\r\n    min-width:200px;\r\n  }\r\n\r\n  .signup-page , .signin-page{\r\n\r\n    width:444px;\r\n    margin:auto;\r\n\r\n  }\r\n  .sendEmail-page{\r\n   \r\n    min-width:444px;\r\n    margin:auto;\r\n\r\n  }\r\n  .firstInfo-page, .secondInfo-page ,.social-page ,.trial-page {\r\n     width:690px;\r\n    margin:auto;\r\n  }\r\n\r\n  .start-page{\r\n    width:879px;\r\n    margin:auto;\r\n  \r\n  }\r\n\r\n.linkback, a{\r\n  text-decoration: none;\r\n}\r\n.title {\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n }\r\n .largesize{ \r\n  font-Size:32px !important;\r\n  font-Weight:700 !important ;\r\n}\r\n.bigsize{\r\n  font-Size:32px !important;\r\n  font-Weight:600 !important ;\r\n}\r\n.smallsize{\r\n  font-Size:18px !important;\r\n  font-Weight:500 !important ;\r\n}\r\n.title-inter {\r\n  font-Family:'inter' !important;\r\n }\r\n.smalltitle .MuiCardHeader-title{\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n  font-Size:18px !important;\r\n  font-Weight:700 !important ;\r\n\r\n}\r\n.card{\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n}\r\n.transparent{\r\n  background-color: #FFFFFF00 !important;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

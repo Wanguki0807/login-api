@@ -82,11 +82,11 @@ const onSubmit = (data) =>{
 }
     return (
       <div className="secondInfo-page">
-         <Typography   color="primary" variant="h4" sx={{pb:1,textAlign: 'center'}}>
+         <Typography   color="primary" variant="h4" sx={{pb:1, fontWeight:'bold',textAlign: 'center'}}>
           LOGO
              </Typography>
-        <Card elevation={2}  sx={{p:6,mt:3 ,borderRadius: 5}} >
-          <CardHeader variant="h5"
+        <Card elevation={2}  sx={{p:6,pt:5,mt:3 ,borderRadius: 5}} >
+          <CardHeader variant="h6"
             sx={{ p:0 ,  fontWeight:'bold',textAlign: 'center'}}
             className="w-100"
           
@@ -212,7 +212,7 @@ const onSubmit = (data) =>{
                 </Button>
                 
                 <Button
-                    className="text-center m-2 w-50"
+                    className="text-center m-2 mx-3 w-50 title-inter"
                     style={{maxWidth: '260px', maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
                     color="primary"
                     sx={{ pb:2,width:200 ,fontsize:20,  fontWeight:'bold'}}

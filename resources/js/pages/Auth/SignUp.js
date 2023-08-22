@@ -151,7 +151,7 @@ const onSubmit = (data) => {
             subheader={(
               <Typography
                 color="text.secondary"
-                sx={{mt:0}}
+                sx={{mt:1}}
                 varient="body2"
               >
                 Already have an account?
@@ -173,7 +173,7 @@ const onSubmit = (data) => {
               <Stack spacing={0} sx={{pb:0}}>
             
                 <TextField
-                     size="Medium*"
+                   className="title-inter"
                      name="name"
                      variant="outlined"
                      label="Enter User Name"
@@ -192,8 +192,8 @@ const onSubmit = (data) => {
             <Box sx={{mb:2,fontsize:5}}>
                 {errors.name && <span className="error-message">Please check the User Name</span>}
                 </Box>
-              <TextField className="txtfield"
-                size = "medium"
+              <TextField className="title-inter"
+                
                 name="email"
                 variant="outlined"
                  label="Enter Email"
@@ -215,8 +215,7 @@ const onSubmit = (data) => {
                   )}
                 </Box>                                
                 <TextField
-                   size = "medium"
-                  // label="Password"
+                   className="title-inter"
                   name="password"
                   type="password"
                   variant="outlined"
@@ -246,8 +245,8 @@ const onSubmit = (data) => {
                     )}
                   </Box>        
                 
-                 <TextField
-                  size = "medium"
+                 <TextField 
+                  className="title-inter"
                    type="password"
                   label="Confirm Password"
                   name="confirmpassword"

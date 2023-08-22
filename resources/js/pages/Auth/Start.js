@@ -85,7 +85,7 @@ export default function Start (props) {
               <Button  className="text-center m-2 w-25 btn btn-outline-primary "
                 size="medium"
                 color="white"
-                sx={{borderColor: 'primary.main'}}
+              
                 onClick = {onLaterClicked}
               >
                Do it later
