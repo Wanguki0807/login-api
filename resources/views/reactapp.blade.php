@@ -20,6 +20,12 @@
 <body class="antialiased">
   <!-- React DOM Node -->
   <div id="app"></div>
+  <!-- <script>
+    wondow.env = {
+        SITE_KEY : "{{ env('REACT_APP_SITE_KEY')}}",
+        SECRET_KEY : "{{ env('REACT_APP_SECRET_KEY')}}"
+    };
+  </script> -->
   <script type="text/javascript" src="{{mix('js/app.js')}}"></script>
 </body>
 </html>

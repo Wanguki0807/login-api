@@ -65,8 +65,7 @@ const onSubmit = (data) =>{
             companylocation: "",
         })
         setTimeout(() => {
-          setMsg("")
-          
+          setMsg("")          
         }, 2000);
         navigate('/secondInfo')
         setIsLoading(false)
@@ -81,7 +80,7 @@ const onSubmit = (data) =>{
         setIsLoading(false)
         setClick("Save Changes and NEXT")
       }
-    }, 1000);
+    }, 2000);
     });
 
 }
@@ -125,6 +124,7 @@ const onSubmit = (data) =>{
                 </Box>
                 <TextField
                          className = "title-inter"
+                         type="number"
                         sx={{
                             '& .MuiFormLabel-root': {
                               fontSize: '0.8rem',

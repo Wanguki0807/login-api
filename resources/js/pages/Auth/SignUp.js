@@ -41,6 +41,11 @@ const [signupData, setSignupData] = useState({
  const [Register, setRegister] = useState("Register");
  const [message, setMessage] = useState("");
 const  [error,setError] = useState("");
+const [recaptchaValue, setRecaptchaValue]= useState('');
+
+const handleRecaptchaChanged = (value) =>{
+    setRecaptchaValue(value);
+}
 
 const onHandleChange = (e) => 
   {
@@ -49,19 +54,23 @@ const onHandleChange = (e) =>
 
 
 
-const verifyRecaptcha = async ( token ) => {
-    // try{
-    //   console.log(token);
-
-    // let response = await axios.post(`/contact-us`,{
-    //     secret:process.env.REACT_APP_SECRET_KEY,
-    //     token:token
-    // });
-    // return true;
-    // }catch(error){
-    // console.log("error ",error);
-    // return false;
-    // }
+const verifyRecaptcha = () => {
+   
+  if (recaptchaValue){
+    axios.post('/api/verify-recaptcha',{recaptcha:recaptchaValue})
+    .then(response =>{
+      return  true;
+      console.log(response.data.message)
+    })
+    .catch(error =>{
+      console.error('Error verifying reCAPTCHA',error);
+      return false;
+    })
+  }
+  else{
+    alert("Please complete the reCAPTCHA");
+    return false;
+  }
 }
 const sendEmailVerification = async () => {
   try {
@@ -81,12 +90,20 @@ const onSubmit = (data) => {
         setConfirmMsg("Confirm Password Error");
         return;
     }
+
+   
+
+  if( verifyRecaptcha() == false) {
+    alert("Please complete the reCAPTCHA");
+    captchaRef.current.reset();
+    return;
+  }
     setConfirmMsg("");
     setIsLoading(true);
     setRegister("");
-    const token = captchaRef.current.getValue();
+  
     
-    const notRobot = verifyRecaptcha(token); 
+    
     setTimeout(() => {
     axios
       .post("/api/user-signup", signupData)
@@ -123,7 +140,7 @@ const onSubmit = (data) => {
       });
     }, 500);
   };
-
+// console.log(window.env.SITE_KEY)
     return (
       <div className="signup-page align-items-center">
        < Box sx={{ mb:1 }} >
@@ -193,7 +210,7 @@ const onSubmit = (data) => {
                 {errors.name && <span className="error-message">Please check the User Name</span>}
                 </Box>
               <TextField  required
-               autoComplete="off"
+              
                className="title-inter"
                 name="email"
                 variant="outlined"
@@ -313,7 +330,7 @@ const onSubmit = (data) => {
             </Typography>
           </Box>
           <div className='formGroup  px-2 '>
-               <ReCAPTCHA sitekey={"6Le9z7knAAAAANZgZ6Z1uahHF22pBxmtVVZlFdEx"} ref={captchaRef} />{message}
+               <ReCAPTCHA sitekey={"6Le9z7knAAAAANZgZ6Z1uahHF22pBxmtVVZlFdEx"} ref={captchaRef} onChange={handleRecaptchaChanged}/>{message}
           </div>
 
 

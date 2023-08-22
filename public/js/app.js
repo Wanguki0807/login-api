@@ -30423,7 +30423,7 @@ function FirstInfo(props) {
           setIsLoading(false);
           setClick("Save Changes and NEXT");
         }
-      }, 1000);
+      }, 2000);
     });
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -30497,6 +30497,7 @@ function FirstInfo(props) {
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], _objectSpread(_objectSpread({
                 className: "title-inter",
+                type: "number",
                 sx: {
                   '& .MuiFormLabel-root': {
                     fontSize: '0.8rem',
@@ -32080,47 +32081,56 @@ function Signup(props) {
     _useState14 = _slicedToArray(_useState13, 2),
     error = _useState14[0],
     setError = _useState14[1];
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+    _useState16 = _slicedToArray(_useState15, 2),
+    recaptchaValue = _useState16[0],
+    setRecaptchaValue = _useState16[1];
+  var handleRecaptchaChanged = function handleRecaptchaChanged(value) {
+    setRecaptchaValue(value);
+  };
   var onHandleChange = function onHandleChange(e) {
     setSignupData(_objectSpread(_objectSpread({}, signupData), {}, _defineProperty({}, e.target.name, e.target.value)));
   };
-  var verifyRecaptcha = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(token) {
+  var verifyRecaptcha = function verifyRecaptcha() {
+    if (recaptchaValue) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().post('/api/verify-recaptcha', {
+        recaptcha: recaptchaValue
+      }).then(function (response) {
+        return true;
+        console.log(response.data.message);
+      })["catch"](function (error) {
+        console.error('Error verifying reCAPTCHA', error);
+        return false;
+      });
+    } else {
+      alert("Please complete the reCAPTCHA");
+      return false;
+    }
+  };
+  var sendEmailVerification = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
       return _regeneratorRuntime().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-          case "end":
-            return _context.stop();
-        }
-      }, _callee);
-    }));
-    return function verifyRecaptcha(_x2) {
-      return _ref.apply(this, arguments);
-    };
-  }();
-  var sendEmailVerification = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-        while (1) switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.prev = 0;
-            _context2.next = 3;
+            _context.prev = 0;
+            _context.next = 3;
             return axios__WEBPACK_IMPORTED_MODULE_1___default().post('api/verify-email');
           case 3:
             console.log('Verification email sent');
-            _context2.next = 9;
+            _context.next = 9;
             break;
           case 6:
-            _context2.prev = 6;
-            _context2.t0 = _context2["catch"](0);
-            console.error('Error sending verification email', _context2.t0);
+            _context.prev = 6;
+            _context.t0 = _context["catch"](0);
+            console.error('Error sending verification email', _context.t0);
           case 9:
           case "end":
-            return _context2.stop();
+            return _context.stop();
         }
-      }, _callee2, null, [[0, 6]]);
+      }, _callee, null, [[0, 6]]);
     }));
     return function sendEmailVerification() {
-      return _ref2.apply(this, arguments);
+      return _ref.apply(this, arguments);
     };
   }();
   var onSubmit = function onSubmit(data) {
@@ -32129,11 +32139,14 @@ function Signup(props) {
       setConfirmMsg("Confirm Password Error");
       return;
     }
+    if (verifyRecaptcha() == false) {
+      alert("Please complete the reCAPTCHA");
+      captchaRef.current.reset();
+      return;
+    }
     setConfirmMsg("");
     setIsLoading(true);
     setRegister("");
-    var token = captchaRef.current.getValue();
-    var notRobot = verifyRecaptcha(token);
     setTimeout(function () {
       axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/user-signup", signupData).then(function (response) {
         if (response.data.status === 200) {
@@ -32166,6 +32179,7 @@ function Signup(props) {
       });
     }, 500);
   };
+  // console.log(window.env.SITE_KEY)
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "signup-page align-items-center",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -32254,7 +32268,6 @@ function Signup(props) {
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], _objectSpread(_objectSpread({
               required: true,
-              autoComplete: "off",
               className: "title-inter",
               name: "email",
               variant: "outlined",
@@ -32370,7 +32383,8 @@ function Signup(props) {
             className: "formGroup  px-2 ",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_google_recaptcha__WEBPACK_IMPORTED_MODULE_3__["default"], {
               sitekey: "6Le9z7knAAAAANZgZ6Z1uahHF22pBxmtVVZlFdEx",
-              ref: captchaRef
+              ref: captchaRef,
+              onChange: handleRecaptchaChanged
             }), message]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
             color: "red",
