@@ -7,7 +7,7 @@ import SendEmail from "../pages/Auth/SendEmail.js";
 import Start from "../pages/Auth/Start";
 import FirstInfo from "../pages/Auth/FirstInfos";
 import SocialHandle from "../pages/Auth/SocialHandle";
-import SecondInfo from "../pages/Auth/SecondInfo";
+import SecondInfo from "../pages/Auth/SecondInfo-old";
 import Trial from "../pages/Auth/Trial";
 import ForgetPassword from "../pages/Auth/ForgetPassword";
 import ResetPassword from "../pages/Auth/ResetPassword";

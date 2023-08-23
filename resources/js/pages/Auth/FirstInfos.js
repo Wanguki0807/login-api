@@ -89,7 +89,7 @@ const validationSchema = Yup.object({
         
         setTimeout(() => {
         axios
-          .post("/api/FirstInfo", values)
+          .post("/api/first-Info", values)
            .then((response) => {
              if (response.data.status === 200) {
                setInitialValues({
