@@ -60,7 +60,7 @@
 
   .signup-page , .signin-page{
 
-    width:520px;
+    width:620px;
     margin:auto;
 
   }
@@ -120,4 +120,9 @@
 }
 .transparent{
   background-color: #FFFFFF00 !important;
+}
+
+.MuiButton-root {
+  border-radius: 12px !important;
+  background-color:#2970FF !important;
 }

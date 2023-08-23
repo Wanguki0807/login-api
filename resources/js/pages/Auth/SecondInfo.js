@@ -114,8 +114,10 @@ const validationSchema = Yup.object({
   return (
     <>
       <Seo title="Business Info" />
-      <div className="firstInfo-page">
-       
+      <div className="secondInfo-page">
+      <Typography   color="primary" variant="h4" sx={{pb:1, fontWeight:'bold',textAlign: 'center'}}>
+          LOGO
+             </Typography>
         <Card elevation={16} sx={{borderRadius: 5 }}className="card  px-4 pt-4 pb-3" >
           <CardHeader
         
@@ -191,6 +193,21 @@ const validationSchema = Yup.object({
                 /></div>
                 
               </Stack>  
+              <div className='p-1 px-3  '>
+              <RedditTextfield
+                  label="Bio"
+                  className="title-inter "
+                  name="aboutbusiness"
+                  variant="filled"
+                  multiline
+                  fullWidth
+                  style={{ marginTop: 11 }}
+                  error={!!(formik.touched.aboutbusiness && formik.errors.aboutbusiness)}
+                  helperText={formik.touched.aboutbusiness && formik.errors.aboutbusiness}
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.aboutbusiness}
+                /></div>
 
              <div className= "row d-flex justify-content-end pt-4 px-1 title-inter">
               
