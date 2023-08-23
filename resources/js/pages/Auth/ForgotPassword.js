@@ -1,6 +1,8 @@
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import ArrowLeftIcon from '@untitled-ui/icons-react/build/esm/ArrowLeft';
+import  RedditTextfield from '../../components/frontpage/TextfieldStyle';
+import "../Form.css";
+
 import {
   Box,
   Button,
@@ -12,8 +14,10 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-// import { RouterLink } from 'src/components/router-link';
-// import { Seo } from 'src/components/seo';
+import { RouterLink } from '../../components/frontpage/router-link';
+import { Seo } from '../../components/frontpage/seo';
+import ArrowLeftIcon from '@untitled-ui/icons-react/build/esm/ArrowLeft';
+
 // import { paths } from 'src/paths';
 
 const initialValues = {
@@ -37,12 +41,12 @@ const Page = () => {
 
   return (
     <>
-      {/* <Seo title="Forgot Password" /> */}
-      <div>
+      <Seo title="Forgot Password" />
+      <div className="forgotpassword-page">
         <Box sx={{ mb: 4 }}>
           <Link
             color="text.primary"
-            // component={RouterLink}
+            component={RouterLink}
             // href={paths.dashboard.index}
             sx={{
               alignItems: 'center',
@@ -58,7 +62,7 @@ const Page = () => {
             </Typography>
           </Link>
         </Box>
-        <Card elevation={16}>
+        <Card elevation={16} sx={{borderRadius: 5 }}className="card  px-4 pt-4 pb-3">
           <CardHeader
             sx={{ pb: 0 }}
             title="Forgot password"
@@ -68,8 +72,11 @@ const Page = () => {
               noValidate
               onSubmit={formik.handleSubmit}
             >
-              <TextField
+              <RedditTextfield
+                className="title-inter mt-4"
                 autoFocus
+                variant="filled"
+                style={{ marginTop: 11 }}
                 error={!!(formik.touched.email && formik.errors.email)}
                 fullWidth
                 helperText={formik.touched.email && formik.errors.email}

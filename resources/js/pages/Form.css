@@ -64,7 +64,7 @@
     margin:auto;
 
   }
-  .signin-page{
+  .signin-page, .forgotpassword-page, .resetpassword-page{
 
     width:620px;
     margin:auto;
