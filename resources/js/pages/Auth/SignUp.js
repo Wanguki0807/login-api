@@ -1,58 +1,73 @@
 import { useRef, useState } from "react";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import axios from "axios";
-import "../Form.css";
-import ReCAPTCHA from 'react-google-recaptcha';
-import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import ArrowLeftIcon from '@untitled-ui/icons-react/build/esm/ArrowLeft';
+import  RedditTextfield from '../../components/frontpage/TextfieldStyle';
+import ReCAPTCHA from 'react-google-recaptcha';
 
+import "../Form.css";
 import {
   Box,
+  Button,
   Card,
   CardContent,
   CardHeader,
   Checkbox,
+  FormHelperText,
+  Link,
   Stack,
   SvgIcon,
   TextField,
   Typography,
   CircularProgress
 } from '@mui/material';
+import { RouterLink } from '../../components/frontpage/router-link';
+import { Seo } from '../../components/frontpage/seo';
+// import { paths } from 'src/paths';
 
-export default function Signup (props) {
 
-const captchaRef = useRef(null);
-const navigate = useNavigate();
-const { register, handleSubmit, formState: { errors } } = useForm();
-const [signupData, setSignupData] = useState({
-      name: "",
-      email: "",
-      confirmpassword: "",
-      password: "",
-      isLoading: "",
-      condition: false,
-      isRobot : false,
-})
- const [msg, setMsg] = useState('');
- const [confirmMsg, setConfirmMsg] = useState('');
- const [isLoading, setIsLoading] = useState(false);
- const [Register, setRegister] = useState("Register");
- const [message, setMessage] = useState("");
-const  [error,setError] = useState("");
-const [recaptchaValue, setRecaptchaValue]= useState('');
+
+
+
+const Page = () => {
+
+  
+const validationSchema = Yup.object({
+  email: Yup
+    .string()
+    .email('Must be a valid email')
+    .max(255)
+    .required('Email is required'),
+  name: Yup
+    .string()
+    .max(255)
+    .required('Name is required'),
+  password: Yup
+    .string()
+    .min(7)
+    .max(255)
+    .required('Password is required'),
+  confirmpassword: Yup
+    .string()
+    .oneOf([Yup.ref('password')], 'Passwords must match'),
+  policy: Yup
+    .boolean()
+    .oneOf([true], 'This field must be checked')
+});
 
 const handleRecaptchaChanged = (value) =>{
-    setRecaptchaValue(value);
+  setRecaptchaValue(value);
 }
 
-const onHandleChange = (e) => 
-  {
-      setSignupData({...signupData, [e.target.name]: e.target.value})
-   }
-
-
+const sendEmailVerification = async () => {
+  try {
+    await axios.post('api/verify-email');
+    console.log('Verification email sent');
+  } catch (error) {
+    console.error('Error sending verification email', error);
+  }
+};
 
 const verifyRecaptcha = () => {
    
@@ -60,7 +75,7 @@ const verifyRecaptcha = () => {
     axios.post('/api/verify-recaptcha',{recaptcha:recaptchaValue})
     .then(response =>{
       return  true;
-      console.log(response.data.message)
+      // console.log(response.data.message)
     })
     .catch(error =>{
       console.error('Error verifying reCAPTCHA',error);
@@ -72,291 +87,238 @@ const verifyRecaptcha = () => {
     return false;
   }
 }
-const sendEmailVerification = async () => {
-  try {
-    await axios.post('api/verify-email');
-    console.log('Verification email sent');
-  } catch (error) {
-    console.error('Error sending verification email', error);
-  }
-};
 
-const onSubmit = (data) => {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+  const [Register, setRegister] = useState("Register");
+  const [recaptchaValue, setRecaptchaValue]= useState('');
+  const captchaRef = useRef(null);
+  const [initialValues, setInitialValues] = useState({
+    email: '',
+    name: '',
+    password: '',
+    confirmpassword:'',
+    policy: false,
+  });
+  const formik = useFormik({
+  initialValues,
+  validationSchema,
+  onSubmit: values => { 
 
-  localStorage.setItem("Email",JSON.stringify(signupData.email));
-  
-  if(data.password != data.confirmpassword )
-    {
-        setConfirmMsg("Confirm Password Error");
+      localStorage.setItem("Email",JSON.stringify(values.email));
+      if( verifyRecaptcha() == false) {
+        alert("Please complete the reCAPTCHA");
+        captchaRef.current.reset();
         return;
+      }
+        setIsLoading(true);
+        setRegister("");
+        // console.log(values)
+        
+        setTimeout(() => {
+        axios
+          .post("/api/user-signup", values)
+           .then((response) => {
+             if (response.data.status === 200) {
+                captchaRef.current.reset();
+               sendEmailVerification()
+              setInitialValues({
+                email: '',
+                name: '',
+                password: '',
+                confirmpassword:'',
+                policy: false,
+              })
+              navigate('/SendEmail')
+              setRegister("Register")
+              setIsLoading(false)
+            }
+    
+            if (response.data.status === "failed") {
+            setRegister("Register")
+            setIsLoading(false)
+            console.log(false)
+
+            }
+          });
+        }, 500);
     }
+  });
 
-   
-
-  if( verifyRecaptcha() == false) {
-    alert("Please complete the reCAPTCHA");
-    captchaRef.current.reset();
-    return;
-  }
-    setConfirmMsg("");
-    setIsLoading(true);
-    setRegister("");
-  
-    
-    
-    setTimeout(() => {
-    axios
-      .post("/api/user-signup", signupData)
-       .then((response) => {
-         if (response.data.status === 200) {
-          captchaRef.current.reset();
-          sendEmailVerification()
-          setMsg(response.data.message)
-          setSignupData({
-            name: "",
-            email: "",
-            password: "",
-            confirmpassword:"",
-            condition: false,
-            isRobot : false,
-          })
-          setTimeout(() => {
-            setMsg("")
-          }, 1000);
-          navigate('/SendEmail')
-          setRegister("Register")
-          setIsLoading(false)
-         
-        }
-
-        if (response.data.status === "failed") {
-          setMsg(response.data.message)
-          setTimeout(() => {
-            setMsg("")
-          }, 1000);
-        setRegister("Register")
-        setIsLoading(false)
-        }
-      });
-    }, 500);
-  };
-// console.log(window.env.SITE_KEY)
-    return (
-      <div className="signup-page align-items-center">
-       < Box sx={{ mb:1 }} >
-          <Link 
-            to="/sign-in"
-            className="d-flex"
-            color="inherit"
+  return (
+    <>
+      <Seo title="Register" />
+      <div className="signup-page">
+        <Box sx={{ mb: 2 }}>
+          <Link
+            color="text.primary"
+            component={RouterLink}
+            to ="/Dashboard"
+            sx={{
+              alignItems: 'center',
+              display: 'inline-flex'
+            }}
+            underline="hover"
           >
-            <SvgIcon sx={{ height:20}}>
-              <ArrowLeftIcon   color='black'variant="small"/>
+            <SvgIcon sx={{ mr: 1 }}>
+              <ArrowLeftIcon />
             </SvgIcon>
-            <Typography  color='black' className="linkback"  variant="small"> 
+            <Typography variant="subtitle2">
               Back
             </Typography>
           </Link>
         </Box>
-
-       <Typography color='black' 
+        <Typography color='black' 
            className="title largesize my-4"
             variant="h4" >
              Brand Account Creation
           </Typography>
-        <Card elevation={16} sx={{borderRadius: 5 }} className="card  px-4 pt-4 pb-3">
-          <CardHeader    className=" smalltitle mt-2" varient="h6"  title="Register"
+        <Card elevation={16} sx={{borderRadius: 5 }}className="card  px-4 pt-4 pb-3" >
+          <CardHeader
             subheader={(
               <Typography
                 color="text.secondary"
-                sx={{mt:1}}
-                varient="body2"
+                variant="body2"
+                className="title-inter"
               >
                 Already have an account?
                 &nbsp;
                 <Link
-                  
-                  to="/sign-in"
-                  variant="body2"
+                  href ="/Sign-in"
+                  underline="hover"
+                  variant="subtitle2"
+                  className="title-inter"
                 >
                   Log in
                 </Link>
               </Typography>
             )}
-        
-           
+            sx={{ pb: 0 }}
+            className=" smalltitle mt-2"
+            title="Register"
           />
-          <CardContent >
-            <Form  onSubmit={handleSubmit(onSubmit)}>
-              <Stack spacing={0} sx={{pb:0}}>
-            
-                <TextField
-                    required
-                    autoComplete="off"
-                     className="title-inter"
-                     name="name"
-                     variant="outlined"
-                     label="Enter User Name"
-                   
-                     sx={{
-                      '& .MuiFormLabel-root': {
-                        fontSize: '0.8rem',
-                        mt:'0.1rem',
-                      },
-                    }}
-                     {...register("name",{required: true})}
-                     onChange={onHandleChange} 
+          <CardContent>
+            <form
+              noValidate
+              onSubmit={formik.handleSubmit}
+            >
+              <Stack spacing={3}>
+              <RedditTextfield
+                  label="Name"
+                  className="title-inter mt-3"
+                  name="name"
+                  variant="filled"
+                  style={{ marginTop: 11 }}
+                  error={!!(formik.touched.name && formik.errors.name)}
+                  fullWidth
+                  helperText={formik.touched.name && formik.errors.name}
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.name}
                 />
-            <Box sx={{mb:2,fontsize:5}}>
-                {errors.name && <span className="error-message">Please check the User Name</span>}
-                </Box>
-              <TextField  required
-              
-               className="title-inter"
-                name="email"
-                variant="outlined"
-                 label="Enter Email"
-                 sx={{
-                  '& .MuiFormLabel-root': {
-                    fontSize: '0.8rem',
-                    mt:'0.1rem',
-                  },
-                }}
-                 {...register("email",{ required: true,  pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })}
-                 onChange={onHandleChange}
+                <RedditTextfield
+                  variant="filled"
+                  className="title-inter mt-3"
+                  style={{ marginTop: 11 }}
+                  error={!!(formik.touched.email && formik.errors.email)}
+                  fullWidth
+                  helperText={formik.touched.email && formik.errors.email}
+                  label="Email Address"
+                  name="email"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  type="email"
+                  value={formik.values.email}
                 />
-                 <Box sx={{mb:2}}>
-                  {errors.email && errors.email.type === "required" && (
-                    <span className="error-message">This is required field</span>
-                  )}
-                  {errors.email && errors.email.type === "pattern" && (
-                    <span className="error-message">Enter a valid email</span>
-                  )}
-                </Box>                                
-                <TextField  required
-                   className="title-inter"
-                   autoComplete="off"
+                <RedditTextfield
+                  variant="filled"
+                  className="title-inter mt-3"
+                  style={{ marginTop: 11 }}
+                  error={!!(formik.touched.password && formik.errors.password)}
+                  fullWidth
+                  helperText={formik.touched.password && formik.errors.password}
+                  label="Password"
                   name="password"
-                 type={"password"}
-                  variant="outlined"
-                  label="Enter password"
-                  sx={{
-                    '& .MuiFormLabel-root': {
-                      fontSize: '0.8rem',
-                      mt:'0.1rem',
-                    },
-                  }}
-                  value={signupData.password}
-                 {...register("password", {
-                            required: true,
-                           minLength:6
-                        })}
-                  onChange={onHandleChange} 
-
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  type="password"
+                  value={formik.values.password}
                 />
-                 <Box sx={{mb:2}}>
-                    {errors.password && errors.password.type === "required" && (
-                      <span className="error-message">This is required field</span> 
-                    )}
-                    {errors.password && errors.password.type === "minLength" && (
-                      <span className="error-message">
-                        Password is not good.Please type more than 6 letters
-                      </span>
-                    )}
-                  </Box>        
-                
-                 <TextField   required
-                  className="title-inter"
-                  autoComplete="off"
-                  type={"password"}
-                  label="Confirm Password"
+                <RedditTextfield
+                  variant="filled"  
+                  className="title-inter mt-3"
+                  style={{ marginTop: 11 }}
+                  error={!!(formik.touched.confirmpassword && formik.errors.confirmpassword)}
+                  fullWidth
+                  helperText={formik.touched.confirmpassword && formik.errors.confirmpassword}
+                  label="confirmPassword"
                   name="confirmpassword"
-                  variant="outlined"
-             
-                  sx={{
-                    '& .MuiFormLabel-root': {
-                      fontSize: '0.8rem',
-                      mt:'0.1rem',
-                    },
-                  }}
-                value={signupData.confirmpassword}
-                {...register("confirmpassword", {
-                    required: true,
-                    minLength : 6
-                })}
-                onChange={onHandleChange}  
-               
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  type="password"
+                  value={formik.values.confirmpassword}
                 />
-                <Box sx={{mb:2}}>
-                    {errors.confirmpassword && errors.confirmpassword.type === "required" && (
-                      <span className="error-message">This is required field</span>
-                    )}
-                    
 
-                      <span className="error-message">
-                            {confirmMsg}
-                      </span>
-                 
-                     {errors.confirmpassword && errors.confirmpassword.type === "minLength" && (
-                      <span className="error-message">
-                        Password is not good.Please type more than 6 letters
-                      </span>
-                    )}
-                  </Box>   
               </Stack>
               <Box
-            sx={{
-              alignItems: 'center',
-              display: 'flex',
-              pl: 1.5,
-              py: 1,
-            }}
-          >
-            <Checkbox
-             onChange={(onHandleChange)}
-              name="condition"
-            />
-            <Typography
-              color="text.secondary"
-              variant="body2"
-            >
-              I have read the
-              {' '}
-              <Link
-                component="a"
-                href="#"
+                sx={{
+                  alignItems: 'center',
+                  display: 'flex',
+                  ml: 1,
+                  mt: 1
+                }}
               >
-                Terms and Conditions
-              </Link>
-            </Typography>
-          </Box>
-          <div className='formGroup  px-2 '>
-               <ReCAPTCHA sitekey={"6Le9z7knAAAAANZgZ6Z1uahHF22pBxmtVVZlFdEx"} ref={captchaRef} onChange={handleRecaptchaChanged}/>{message}
-          </div>
-
-
-          <Typography color="red" className="d-flex justify-content-center my-2">{msg}</Typography>
-          <Box>
-              {/* <p className="text-blue">{msg}</p> */}
+                <Checkbox
+                  checked={formik.values.policy}
+                  name="policy"
+                  onChange={formik.handleChange}
+                />
+                <Typography
+                  color="text.secondary"
+                  variant="body2"
+                  className="title-inter"
+                >
+                  I have read the
+                  {' '}
+                  <Link
+                    component="a"
+                    href="#"
+                    className="title-inter"
+                  >
+                    Terms and Conditions
+                  </Link>
+                </Typography>
               </Box>
+              {!!(formik.touched.policy && formik.errors.policy) && (
+                <FormHelperText error>
+                  {formik.errors.policy}
+                </FormHelperText>
+              )}
+               <div className='formGroup  px-2 '>
+               <ReCAPTCHA sitekey={"6Le9z7knAAAAANZgZ6Z1uahHF22pBxmtVVZlFdEx"}   ref={captchaRef} onChange={handleRecaptchaChanged}/>
+                </div>
+
               <Button
-                className="text-center my-1 w-100 hover-shadow d-flex align-items-center justify-content-center  rounded-6"
-                color="primary"
-                    style={{ maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
-                    // onClick={onSubmitHandler}
-                
+                fullWidth
+                size="large"
+                sx={{ mt: 2 }}
+                type="submit"
+                variant="contained"
+                className="title-inter"
               >
-               <span className="ml-2"> {Register } </span>
+                 <span className="ml-2"> { Register } </span>
                 {isLoading ? (
-                 
-                 
                  <CircularProgress color="inherit" size="2rem" />
                 ) : (
                   <span></span>
                 )}
               </Button>
-            </Form>
-        </CardContent>
+            </form>
+          </CardContent>
         </Card>
       </div>
-    );
-  }
+    </>
+  );
+};
+
+export default Page;

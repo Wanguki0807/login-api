@@ -60,7 +60,7 @@
 
   .signup-page , .signin-page{
 
-    width:444px;
+    width:520px;
     margin:auto;
 
   }
@@ -92,7 +92,7 @@
  }
  .largesize{ 
   font-Size:32px !important;
-  font-Weight:700 !important ;
+  font-Weight:bold !important ;
 }
 .bigsize{
   font-Size:32px !important;

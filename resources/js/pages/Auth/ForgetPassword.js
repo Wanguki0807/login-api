@@ -1,5 +1,5 @@
-// import * as Yup from 'yup';
-// import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
 import ArrowLeftIcon from '@untitled-ui/icons-react/build/esm/ArrowLeft';
 import {
   Box,
@@ -20,20 +20,20 @@ const initialValues = {
   email: ''
 };
 
-// const validationSchema = Yup.object({
-//   email: Yup
-//     .string()
-//     .email('Must be a valid email')
-//     .max(255)
-//     .required('Email is required')
-// });
+const validationSchema = Yup.object({
+  email: Yup
+    .string()
+    .email('Must be a valid email')
+    .max(255)
+    .required('Email is required')
+});
 
 const Page = () => {
-//   const formik = useFormik({
-//     initialValues,
-//     validationSchema,
-//     onSubmit: () => { }
-//   });
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit: () => { }
+  });
 
   return (
     <>
@@ -66,19 +66,19 @@ const Page = () => {
           <CardContent>
             <form
               noValidate
-              // onSubmit={formik.handleSubmit}
+              onSubmit={formik.handleSubmit}
             >
               <TextField
                 autoFocus
-                // error={!!(formik.touched.email && formik.errors.email)}
+                error={!!(formik.touched.email && formik.errors.email)}
                 fullWidth
-                // helperText={formik.touched.email && formik.errors.email}
+                helperText={formik.touched.email && formik.errors.email}
                 label="Email Address"
                 name="email"
-                // onBlur={formik.handleBlur}
-                // onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
                 type="email"
-                // value={formik.values.email}
+                value={formik.values.email}
               />
               <Button
                 fullWidth

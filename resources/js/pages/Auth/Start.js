@@ -47,7 +47,7 @@ export default function Start (props) {
          <Typography   color="primary" variant="h3" sx={{pb:2, fontWeight:'bold',textAlign: 'center'}}>
           LOGO
              </Typography>
-        <Card elevation={1}  sx={{p:7, pt:5,mt:3 ,borderRadius: 5}} >
+        <Card elevation={16}  sx={{p:7, pt:5,mt:3 ,borderRadius: 5}} >
           <CardHeader variant="h5"
             sx={{ pb:0 ,  fontWeight:'bold',textAlign: 'center'}}
             className="w-100"
