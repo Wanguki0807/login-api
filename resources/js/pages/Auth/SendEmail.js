@@ -40,14 +40,6 @@ const onSubmitHandler = async(e) => {
       <div className="sendEmail-page">
          <Card elevation={0} sx={{p:3, pb:0 ,borderRadius: 5}} className="transparent">
           <CardHeader
-            // subheader={(
-            //   <Typography
-            //     color="text.primary"
-            //     sx={{mt:1 , fontsize:30}}
-            //     variant="h4"
-            //   >
-            //   </Typography>
-            // )}
             sx={{ pb:2 ,  fontWeight:'bold  ',textAlign: 'center'}}
             className="w-100"
             variant="h3"
