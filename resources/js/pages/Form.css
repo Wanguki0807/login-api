@@ -58,7 +58,13 @@
     min-width:200px;
   }
 
-  .signup-page , .signin-page{
+  .signup-page {
+
+    width:540px;
+    margin:auto;
+
+  }
+  .signin-page{
 
     width:620px;
     margin:auto;

@@ -8,7 +8,7 @@ const RedditTextField = styled((props) => (
       overflow: 'hidden',
       borderRadius: 10,
       backgroundColor: theme.palette.mode === 'light' ? '#FFFFFF' : '#1A2027',
-      border: '2px solid',
+      border: '3px solid',
       borderColor: theme.palette.mode === 'light' ? '#E0E3E7' : '#2D3843',
       transition: theme.transitions.create([
         'border-color',
@@ -20,14 +20,17 @@ const RedditTextField = styled((props) => (
       },
       '&.Mui-focused': {
         backgroundColor: 'transparent',
-        boxShadow: `${alpha(theme.palette.primary.main, 0.5)} 0 0 0 2px`,
+        // boxShadow: `${alpha(theme.palette.primary.main, 0.5)} 0 0 0 2px`,
         borderColor: theme.palette.primary.main,
       },
-      "&.Mui-error .MuiInputBase-input":{
+      // '&.Mui-focused': {
+      //   borderColor: theme.palette.error.main,
+      // },
+
+      "&.Mui-error":{
         border: "3px solid",
         borderRadius: 7,
-        borderColor: theme.palette.error.main,
-        // backgroundColor: theme.palette.error.secondary,
+        borderColor: theme.palette.error.main
         }
     },
   }));

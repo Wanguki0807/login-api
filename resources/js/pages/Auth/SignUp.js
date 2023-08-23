@@ -94,9 +94,9 @@ const verifyRecaptcha = () => {
   const [recaptchaValue, setRecaptchaValue]= useState('');
   const captchaRef = useRef(null);
   const [initialValues, setInitialValues] = useState({
-    email: '',
+    email: 'DanDoe @ gmail.com',
     name: '',
-    password: '',
+    password: '111111',
     confirmpassword:'',
     policy: false,
   });
