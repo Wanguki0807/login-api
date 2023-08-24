@@ -24,13 +24,9 @@ const curEmail = JSON.parse(localStorage.getItem('Email'));
 const navigate = useNavigate();
 const  onFreeClicked =(e) =>{
     setclick("Start Free Trial");
-    
-  
   }
   const  onStandardClicked =(e) =>{
-    
   }
-
     return (
       <div className="trial-page">
          <Typography   color="primary" variant="h4" sx={{pb:2,m:1, fontWeight:'bold',textAlign: 'center'}}>
