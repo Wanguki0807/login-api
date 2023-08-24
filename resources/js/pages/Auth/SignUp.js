@@ -50,6 +50,9 @@ const validationSchema = Yup.object({
     .required('Password is required'),
   confirmpassword: Yup
     .string()
+    .min(7)
+    .max(255)
+    .required('Password is required')
     .oneOf([Yup.ref('password')], 'Passwords must match'),
   policy: Yup
     .boolean()
@@ -171,9 +174,9 @@ const verifyRecaptcha = () => {
         <Typography color='black' 
            className="title largesize my-4"
             variant="h4" >
-             Brand Account Creation
+             Brand account creation
           </Typography>
-        <Card elevation={16} sx={{borderRadius: 5 }}className="card  px-4 pt-4 pb-3" >
+        <Card  sx={{borderRadius: 5 }}className="mainCard card  px-4 pt-4 pb-3" >
           <CardHeader
             subheader={(
               <Typography
@@ -194,7 +197,7 @@ const verifyRecaptcha = () => {
               </Typography>
             )}
             sx={{ pb: 0 }}
-            className=" smalltitle mt-2"
+            className="title smalltitle mt-2"
             title="Register"
           />
           <CardContent>
@@ -204,7 +207,7 @@ const verifyRecaptcha = () => {
             >
               <Stack spacing={3}>
               <RedditTextfield
-                  label="Name"
+                  label="Username"
                   className="title-inter mt-3"
                   name="name"
                   variant="filled"
@@ -251,7 +254,7 @@ const verifyRecaptcha = () => {
                   error={!!(formik.touched.confirmpassword && formik.errors.confirmpassword)}
                   fullWidth
                   helperText={formik.touched.confirmpassword && formik.errors.confirmpassword}
-                  label="confirmPassword"
+                  label="ConfirmPassword"
                   name="confirmpassword"
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
@@ -304,7 +307,7 @@ const verifyRecaptcha = () => {
                 sx={{ mt: 2 }}
                 type="submit"
                 variant="contained"
-                className="title-inter"
+                className="title-inter mainButton background-blue"
               >
                  <span className="ml-2"> { Register } </span>
                 {isLoading ? (

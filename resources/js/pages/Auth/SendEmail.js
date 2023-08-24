@@ -15,7 +15,7 @@ import {
 export default function EmailVerify (props) {
 
 const navigate = useNavigate();   
-const [start, setStart] = useState("Resend Verification link");
+const [start, setStart] = useState("Resend verification link");
 const [isLoading, setIsLoading] = useState(false);
 const email = JSON.parse(localStorage.getItem('Email'));
 
@@ -45,7 +45,7 @@ const onSubmitHandler = async(e) => {
             variant="h3"
             title="LOGO"
           />
-          <CardContent >
+          <CardContent   >
             <Form >
              <Typography  className="title bigsize mb-3 text-center">
                     Confirm your email address
@@ -56,9 +56,15 @@ const onSubmitHandler = async(e) => {
              <Typography  sx={{pb:4,textAlign: 'center'}}  className="title smallsize" >
                 {email}
              </Typography>
+            <div  className="d-flex justify-content-center" >
              <Button
-                className="text-center mb-3 w-100 hover-shadow d-flex align-items-center justify-content-center "
+                fullWidth
+                size="large"
+                sx={{ mt: 2 }}
+                type="submit"
                 color="primary"
+                variant="contained"
+                className="title-inter w-75 smallsize mainButton "
                 onClick={onSubmitHandler}
               >
                <span className="ml-2"> {start } </span>
@@ -69,7 +75,7 @@ const onSubmitHandler = async(e) => {
                   <span></span>
                 )}
               </Button>
-              
+              </div>
               
             </Form>
         </CardContent>

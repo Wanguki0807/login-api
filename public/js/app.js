@@ -31425,11 +31425,13 @@ var RedditTextField = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_1__["defa
   var theme = _ref.theme;
   return {
     '& .MuiFilledInput-root': {
+      fontWeight: 'Bold',
+      color: 'black',
       overflow: 'hidden',
       borderRadius: 10,
       backgroundColor: theme.palette.mode === 'light' ? '#FFFFFF' : '#1A2027',
       border: '3px solid',
-      borderColor: theme.palette.mode === 'light' ? '#E0E3E7' : '#2D3843',
+      borderColor: theme.palette.mode === 'light' ? '#FaFaFa' : '#2D3843',
       transition: theme.transitions.create(['border-color', 'background-color', 'box-shadow']),
       '&:hover': {
         backgroundColor: 'transparent'
@@ -31545,16 +31547,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var yup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! yup */ "./node_modules/yup/index.esm.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Button.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/esm/Button.js");
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! formik */ "./node_modules/formik/dist/formik.esm.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _components_frontpage_TextfieldStyle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/frontpage/TextfieldStyle */ "./resources/js/components/frontpage/TextfieldStyle.js");
 /* harmony import */ var _Form_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Form.css */ "./resources/js/pages/Form.css");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Card/Card.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardHeader/CardHeader.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardContent/CardContent.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CircularProgress/CircularProgress.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Card/Card.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardHeader/CardHeader.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardContent/CardContent.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Stack/Stack.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CircularProgress/CircularProgress.js");
 /* harmony import */ var _components_frontpage_router_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/frontpage/router-link */ "./resources/js/components/frontpage/router-link.js");
 /* harmony import */ var _components_frontpage_seo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/frontpage/seo */ "./resources/js/components/frontpage/seo.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -31598,12 +31601,12 @@ var Page = function Page() {
     setLetter = _useState4[1];
   var email = JSON.parse(localStorage.getItem('Email'));
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      firstname: '',
-      lastname: '',
-      phonenumber: '',
-      companywebsite: '',
-      companylocation: '',
-      companyname: '',
+      firstname: 'Your First Name',
+      lastname: 'Your Last Name',
+      phonenumber: 'Your Phone Number',
+      companywebsite: 'Your Company Website',
+      companylocation: 'Your Company Location',
+      companyname: 'Your Company Name',
       email: ''
     }),
     _useState6 = _slicedToArray(_useState5, 2),
@@ -31646,35 +31649,49 @@ var Page = function Page() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_frontpage_seo__WEBPACK_IMPORTED_MODULE_6__.Seo, {
       title: "Business Info"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "firstInfo-page",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        elevation: 16,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        color: "primary",
+        variant: "h4",
+        sx: {
+          pb: 1,
+          fontWeight: 'bold',
+          textAlign: 'center'
+        },
+        children: "LOGO"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
         sx: {
           borderRadius: 5
         },
-        className: "card  px-4 pt-4 pb-3",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        className: "mainCard card  px-4 pt-4 pb-3",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
           sx: {
             pb: 0
           },
           variant: "h4",
-          className: "title largesize my-1",
-          title: "General Business Information"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          className: "title largesize my-1"
+          // title="General Business Information"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
           className: "container",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
             noValidate: true,
             onSubmit: formik.handleSubmit,
             className: "row",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+              color: "black",
+              className: "title largesize mb-2"
+              // variant="h4" 
+              ,
+              children: "General Business Information"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
               spacing: 0,
               className: "col-md-6 col-12",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                 className: "p-1 ",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_frontpage_TextfieldStyle__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                  label: "Your first name",
-                  className: "title-inter",
+                  label: "First name",
+                  className: "title-inter ",
                   name: "firstname",
                   variant: "filled",
                   fullWidth: true,
@@ -31697,7 +31714,7 @@ var Page = function Page() {
                   },
                   error: !!(formik.touched.phonenumber && formik.errors.phonenumber),
                   helperText: formik.touched.phonenumber && formik.errors.phonenumber,
-                  label: "Your Phone Number",
+                  label: "Phone Number",
                   name: "phonenumber",
                   fullWidth: true,
                   onBlur: formik.handleBlur,
@@ -31722,7 +31739,7 @@ var Page = function Page() {
                   value: formik.values.companywebsite
                 })
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
               spacing: 0,
               className: "col-md-6 col-12 ",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
@@ -31778,14 +31795,14 @@ var Page = function Page() {
                 })
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-              className: "row d-flex justify-content-end pt-4 px-1 title-inter",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_13__["default"], {
-                className: "text-center m-2 w-25  btn btn-hover-outline ",
+              className: "row d-flex justify-content-end pt-4 px-1 title-inter ",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+                className: "text-center m-2 w-25  btn btn-hover-outline mainButton smallsize",
                 color: "white",
                 onClick: onCancel,
                 children: "Cancel"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_13__["default"], {
-                className: "text-center  m-2 mx-0 w-50 title-inter",
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
+                className: "text-center  m-2 mx-0 w-50 title-inter mainButton background-blue smallsize",
                 color: "primary",
                 style: {
                   maxWidth: '260px',
@@ -31803,7 +31820,7 @@ var Page = function Page() {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("span", {
                   className: "ml-2",
                   children: [" ", letter, " "]
-                }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
+                }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
                   color: "inherit",
                   size: "2rem"
                 }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {})]
@@ -31811,7 +31828,7 @@ var Page = function Page() {
             })]
           })
         })]
-      })
+      })]
     })]
   });
 };
@@ -32171,11 +32188,11 @@ var Page = function Page() {
     setLetter = _useState4[1];
   var email = JSON.parse(localStorage.getItem('Email'));
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      nichecategory: '',
-      budget: '',
-      companysize: '',
-      companyfounded: '',
-      aboutbusiness: '',
+      nichecategory: 'Your Niche Category',
+      budget: 'Your budget',
+      companysize: 'Your Company Size',
+      companyfounded: 'Company founded date',
+      aboutbusiness: 'Write about your business',
       email: ''
     }),
     _useState6 = _slicedToArray(_useState5, 2),
@@ -32229,25 +32246,29 @@ var Page = function Page() {
         },
         children: "LOGO"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        elevation: 16,
         sx: {
           borderRadius: 5
         },
-        className: "card  px-4 pt-4 pb-3",
+        className: "mainCard card  px-4 pt-4 pb-3",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
           sx: {
             pb: 0
           },
           variant: "h4",
-          className: "title largesize my-1",
-          title: "General Business Information"
+          className: "title largesize my-1"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
           className: "container",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
             noValidate: true,
             onSubmit: formik.handleSubmit,
             className: "row",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+              color: "black",
+              className: "title largesize mb-2"
+              // variant="h4" 
+              ,
+              children: "General Business Information"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
               spacing: 0,
               className: "col-md-6 col-12",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
@@ -32303,7 +32324,7 @@ var Page = function Page() {
                   fullWidth: true,
                   onBlur: formik.handleBlur,
                   onChange: formik.handleChange,
-                  value: formik.values.phonenumber
+                  value: formik.values.budget
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                 className: "p-1  ",
@@ -32331,6 +32352,11 @@ var Page = function Page() {
                 name: "aboutbusiness",
                 variant: "filled",
                 multiline: true,
+                inputProps: {
+                  style: {
+                    height: "110px"
+                  }
+                },
                 fullWidth: true,
                 style: {
                   marginTop: 11
@@ -32344,13 +32370,12 @@ var Page = function Page() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
               className: "row d-flex justify-content-end pt-4 px-1 title-inter",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                className: "text-center m-2 w-25  btn btn-hover-outline ",
+                className: "text-center m-2 w-25  btn btn-hover-outline mainButton smallsize",
                 color: "white",
                 onClick: onCancel,
                 children: "Cancel"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                className: "text-center  m-2 mx-0 w-50 title-inter",
-                color: "primary",
+                className: "text-center  m-2 mx-0 w-50 title-inter mainButton background-blue smallsize",
                 style: {
                   maxWidth: '260px',
                   maxHeight: '48px',
@@ -32426,7 +32451,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function EmailVerify(props) {
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useNavigate)();
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Resend Verification link"),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("Resend verification link"),
     _useState2 = _slicedToArray(_useState, 2),
     start = _useState2[0],
     setStart = _useState2[1];
@@ -32501,17 +32526,27 @@ function EmailVerify(props) {
             },
             className: "title smallsize",
             children: email
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-            className: "text-center mb-3 w-100 hover-shadow d-flex align-items-center justify-content-center ",
-            color: "primary",
-            onClick: onSubmitHandler,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
-              className: "ml-2",
-              children: [" ", start, " "]
-            }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-              color: "inherit",
-              size: "1.4rem"
-            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "d-flex justify-content-center",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
+              fullWidth: true,
+              size: "large",
+              sx: {
+                mt: 2
+              },
+              type: "submit",
+              color: "primary",
+              variant: "contained",
+              className: "title-inter w-75 smallsize mainButton ",
+              onClick: onSubmitHandler,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("span", {
+                className: "ml-2",
+                children: [" ", start, " "]
+              }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+                color: "inherit",
+                size: "1.4rem"
+              }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {})]
+            })
           })]
         })
       })]
@@ -32648,32 +32683,34 @@ var Page = function Page() {
             },
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_untitled_ui_icons_react_build_esm_ArrowLeft__WEBPACK_IMPORTED_MODULE_5__["default"], {})
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-            variant: "subtitle2",
+            variant: "body1",
             children: "Dashboard"
           })]
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        elevation: 16,
         sx: {
           borderRadius: 5
         },
-        className: "card  px-4 pt-4 pb-3",
+        className: "mainCard card  px-4 pt-4 pb-3",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
           subheader: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-            className: "title-inter",
-            color: "text.secondary",
-            variant: "body1",
+            className: "title-inter smallsize",
+            color: "text.secondary"
+            // variant="body1"
+            ,
             children: ["Don't have an account? \xA0", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
               href: "/",
-              underline: "hover",
-              variant: "subtitle2",
-              className: "title-inter",
+              underline: "hover"
+              // variant="subtitle2"
+              ,
+              className: "title-inter smallsize",
               children: "Register"
             })]
           }),
           sx: {
             pb: 0
           },
+          className: "title  smalltitle",
           title: "Log in"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
@@ -32720,8 +32757,9 @@ var Page = function Page() {
                 mt: 5
               },
               type: "submit",
+              color: "primary",
               variant: "contained",
-              className: "title-inter smallsize",
+              className: "title-inter smallsize mainButton background-blue",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
                 className: "ml-2",
                 children: [" ", letter, " "]
@@ -32817,7 +32855,7 @@ var Page = function Page() {
     email: yup__WEBPACK_IMPORTED_MODULE_1__.string().email('Must be a valid email').max(255).required('Email is required'),
     name: yup__WEBPACK_IMPORTED_MODULE_1__.string().max(255).required('Name is required'),
     password: yup__WEBPACK_IMPORTED_MODULE_1__.string().min(7).max(255).required('Password is required'),
-    confirmpassword: yup__WEBPACK_IMPORTED_MODULE_1__.string().oneOf([yup__WEBPACK_IMPORTED_MODULE_1__.ref('password')], 'Passwords must match'),
+    confirmpassword: yup__WEBPACK_IMPORTED_MODULE_1__.string().min(7).max(255).required('Password is required').oneOf([yup__WEBPACK_IMPORTED_MODULE_1__.ref('password')], 'Passwords must match'),
     policy: yup__WEBPACK_IMPORTED_MODULE_1__.boolean().oneOf([true], 'This field must be checked')
   });
   var handleRecaptchaChanged = function handleRecaptchaChanged(value) {
@@ -32960,13 +32998,12 @@ var Page = function Page() {
         color: "black",
         className: "title largesize my-4",
         variant: "h4",
-        children: "Brand Account Creation"
+        children: "Brand account creation"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_15__["default"], {
-        elevation: 16,
         sx: {
           borderRadius: 5
         },
-        className: "card  px-4 pt-4 pb-3",
+        className: "mainCard card  px-4 pt-4 pb-3",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
           subheader: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_14__["default"], {
             color: "text.secondary",
@@ -32983,7 +33020,7 @@ var Page = function Page() {
           sx: {
             pb: 0
           },
-          className: " smalltitle mt-2",
+          className: "title smalltitle mt-2",
           title: "Register"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
@@ -32992,7 +33029,7 @@ var Page = function Page() {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
               spacing: 3,
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_frontpage_TextfieldStyle__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                label: "Name",
+                label: "Username",
                 className: "title-inter mt-3",
                 name: "name",
                 variant: "filled",
@@ -33044,7 +33081,7 @@ var Page = function Page() {
                 error: !!(formik.touched.confirmpassword && formik.errors.confirmpassword),
                 fullWidth: true,
                 helperText: formik.touched.confirmpassword && formik.errors.confirmpassword,
-                label: "confirmPassword",
+                label: "ConfirmPassword",
                 name: "confirmpassword",
                 onBlur: formik.handleBlur,
                 onChange: formik.handleChange,
@@ -33091,7 +33128,7 @@ var Page = function Page() {
               },
               type: "submit",
               variant: "contained",
-              className: "title-inter",
+              className: "title-inter mainButton background-blue",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("span", {
                 className: "ml-2",
                 children: [" ", Register, " "]
@@ -33180,14 +33217,14 @@ var Page = function Page() {
     setLetter = _useState4[1];
   var email = JSON.parse(localStorage.getItem('Email'));
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      istogram: "",
-      tiktok: "",
-      youtube: "",
-      facebook: "",
-      twitter: "",
-      pinterest: "",
-      linkedin: "",
-      blogurl: "",
+      istogram: "Your Istogram Handle",
+      tiktok: "Your Tiktok Handle",
+      youtube: "Your Youtube Handle",
+      facebook: "Your Facebook Handle",
+      twitter: "Your Twitter Handle",
+      pinterest: "Your Pinterest Handle",
+      linkedin: "Your Linkedin Handle",
+      blogurl: "Your Blog  Url ",
       email: ""
     }),
     _useState6 = _slicedToArray(_useState5, 2),
@@ -33207,14 +33244,14 @@ var Page = function Page() {
         axios.post("/api/social-Info", values).then(function (response) {
           if (response.data.status === 200) {
             setInitialValues({
-              istogram: "",
-              tiktok: "",
-              youtube: "",
-              facebook: "",
-              twitter: "",
-              pinterest: "",
-              linkedin: "",
-              blogurl: "",
+              istogram: "Your Istogram Handle",
+              tiktok: "Your Tiktok Handle",
+              youtube: "Your Youtube Handle",
+              facebook: "Your Facebook Handle",
+              twitter: "Your Twitter Handle",
+              pinterest: "Your Pinterest Handle",
+              linkedin: "Your Linkedin Handle",
+              blogurl: "Your Blog  Url ",
               email: ""
             });
             navigate('/trial');
@@ -33244,11 +33281,10 @@ var Page = function Page() {
         },
         children: "LOGO"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        elevation: 16,
+        className: "mainCard px-4 pt-3 pb-3 card",
         sx: {
           borderRadius: 5
         },
-        className: "card  px-4 pt-4 pb-3",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
           className: "container",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
@@ -33417,15 +33453,14 @@ var Page = function Page() {
                 })
               })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
-              className: "row d-flex justify-content-end pt-4 px-1 title-inter",
+              className: "row d-flex justify-content-end pt-4 px-1 title-inter smallsize",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                className: "text-center m-2 w-25  btn btn-hover-outline ",
+                className: "text-center m-2 w-25  btn btn-hover-outline mainbutton",
                 color: "white",
                 onClick: onCancel,
                 children: "Cancel"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_14__["default"], {
-                className: "text-center  m-2 mx-0 w-50 title-inter",
-                color: "primary",
+                className: "text-center  m-2 mx-0 w-50 title-inter mainbutton background-blue smallsize",
                 style: {
                   maxWidth: '260px',
                   maxHeight: '48px',
@@ -33535,7 +33570,7 @@ function Start(props) {
       },
       children: "LOGO"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      elevation: 16,
+      className: "mainCard card",
       sx: {
         p: 7,
         pt: 5,
@@ -33579,7 +33614,7 @@ function Start(props) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "d-flex ",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(reactstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-              className: "text-center m-2 w-50 ",
+              className: "text-center m-2 w-50 mainButton title-inter smallsize",
               color: "primary",
               style: {
                 maxWidth: '260px',
@@ -33602,7 +33637,7 @@ function Start(props) {
                 size: "2.0rem"
               }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {})]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-              className: "text-center m-2 w-25 btn btn-outline-primary ",
+              className: "text-center m-2 w-25 btn btn-outline-primary mainButton title-inter smallsize",
               size: "medium",
               color: "white",
               onClick: onLaterClicked,
@@ -33637,7 +33672,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Form_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Form.css */ "./resources/js/pages/Form.css");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
-/* harmony import */ var _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Assets/SVG/check-20.svg */ "./resources/js/Assets/SVG/check-20.svg");
+/* harmony import */ var _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Assets/SVG/check-21.svg */ "./resources/js/Assets/SVG/check-21.svg");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Card/Card.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardHeader/CardHeader.js");
@@ -33694,8 +33729,7 @@ function Trial(props) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "col-md-6 col-12 pr-2",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          className: " shadow-lg",
-          elevation: 2,
+          className: "mainCard",
           sx: {
             p: 2,
             borderRadius: 5
@@ -33704,7 +33738,7 @@ function Trial(props) {
             variant: "h6",
             avatar: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
               alt: "Apple",
-              src: "../../Assets/SVG/logo.svg"
+              src: "../../Assets/png/avatar.png"
             }),
             sx: {
               pb: 0,
@@ -33748,7 +33782,7 @@ function Trial(props) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start justify-items-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2  mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33757,7 +33791,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start  justify-items-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33766,7 +33800,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33775,7 +33809,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33784,7 +33818,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33793,7 +33827,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33802,7 +33836,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33811,7 +33845,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33820,7 +33854,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                   className: "d-flex justify-content-center mt-3",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_11__["default"], {
-                    className: "text-center m-2 w-100 btn btn-outline-primary title",
+                    className: "text-center m-2 w-100 btn btn-outline-primary title-inter smallsize mainButton",
                     style: {
                       maxWidth: '260px',
                       maxHeight: '48px',
@@ -33843,8 +33877,7 @@ function Trial(props) {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "col-md-6 col-12 pl-2",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          className: " shadow-lg",
-          elevation: 16,
+          className: "mainCard",
           sx: {
             p: 2,
             borderRadius: 6
@@ -33897,7 +33930,7 @@ function Trial(props) {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start justify-items-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33906,7 +33939,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start  justify-items-center",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33915,7 +33948,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33924,7 +33957,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33933,7 +33966,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33942,7 +33975,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2",
@@ -33951,7 +33984,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33960,7 +33993,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
                   className: "d-flex justify-content-start",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-                    src: _Assets_SVG_check_20_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
+                    src: _Assets_SVG_check_21_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
                     className: "me-2 mb-2 pb-2"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                     className: "mb-2 pb-2 title-inter tinysize",
@@ -33969,7 +34002,7 @@ function Trial(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                   className: "d-flex justify-content-center mt-3",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(reactstrap__WEBPACK_IMPORTED_MODULE_11__["default"], {
-                    className: "text-center m-2 w-100 btn btn-outline-primary",
+                    className: "text-center m-2 w-100 btn btn-outline-primary title-inter smallsize mainButton",
                     style: {
                       maxWidth: '260px',
                       maxHeight: '48px',
@@ -38566,7 +38599,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_Assets_SVG_gradient_bg_svg__WEBPACK_IMPORTED_MODULE_2__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_Assets_png_person_standing_png__WEBPACK_IMPORTED_MODULE_3__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n#app{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-repeat:no-repeat;\r\n  display:flex;\r\n  height:100%;\r\n}\r\n\r\n.containers {\r\n    background-color: rgb(255, 255, 255);\r\n    padding: 20px 40px;\r\n    color: #fff;\r\n    font-weight: 600;\r\n    border: solid 1px;\r\n    border-radius:3%;\r\n    box-shadow: 7px -8px 11px -5px rgba(#195190FF);\r\n}\r\n.Tab{\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.signUp, .signIn{\r\n    background-color: #A2A2A1FF;\r\n    width:50%;\r\n    font-size: 22px;\r\n    color: #201f1f;\r\n    padding: 10px;\r\n    text-align: center;\r\n}\r\n.signIn:hover, .signUp:hover {\r\n    text-decoration: none;\r\n    color: #fff;\r\n}\r\n.activeLink{\r\n    color: #fff;\r\n    background-color: #195190FF;\r\n}\r\n.border-radiusImportant{\r\n    border-radius: 5px !important;\r\n  }\r\n  .error-message{\r\n    color:red;\r\n    font-size:13px;\r\n  }\r\n  .text-blue{\r\n    color:blue;\r\n    text-align: center;\r\n    font-weight:'bold';\r\n  }\r\n  /* .sendEmail-card{\r\n    padding-top:100px;\r\n  } */\r\n  .left-img{\r\n     background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + "); \r\n     background-size: cover;\r\n\r\n    min-width:200px;\r\n  }\r\n\r\n  .signup-page {\r\n\r\n    width:540px;\r\n    margin:auto;\r\n\r\n  }\r\n  .signin-page, .forgotpassword-page, .resetpassword-page{\r\n\r\n    width:620px;\r\n    margin:auto;\r\n\r\n  }\r\n  .sendEmail-page{\r\n   \r\n    min-width:444px;\r\n    margin:auto;\r\n\r\n  }\r\n  .firstInfo-page, .secondInfo-page ,.social-page ,.trial-page {\r\n     width:690px;\r\n    margin:auto;\r\n  }\r\n  .trial-page {\r\n    width:750px;\r\n   margin:auto;\r\n }\r\n  .start-page{\r\n    width:879px;\r\n    margin:auto;\r\n  \r\n  }\r\n\r\n.linkback, a{\r\n  text-decoration: none;\r\n}\r\n.title {\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n }\r\n .largesize{ \r\n  font-Size:32px !important;\r\n  font-Weight:bold !important ;\r\n}\r\n.bigsize{\r\n  font-Size:32px !important;\r\n  font-Weight:600 !important ;\r\n}\r\n.smallsize{\r\n  font-Size:18px !important;\r\n  font-Weight:500 !important ;\r\n}\r\n.tinysize{\r\n  font-Size:14px !important;\r\n  font-Weight:500 !important ;\r\n}\r\n.title-inter {\r\n  font-Family:'inter' !important;\r\n }\r\n.smalltitle .MuiCardHeader-title{\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n  font-Size:18px !important;\r\n  font-Weight:700 !important ;\r\n\r\n}\r\n.card{\r\n  font-Family:'Plus Jakarta Sans' !important;\r\n}\r\n.transparent{\r\n  background-color: #FFFFFF00 !important;\r\n}\r\n\r\n.MuiButton-root {\r\n  border-radius: 12px !important;\r\n  background-color:#2970FF !important;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n#app{\r\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n  background-repeat:no-repeat;\r\n  display:flex;\r\n  height:100%;\r\n}\r\n\r\n.containers {\r\n    background-color: rgb(255, 255, 255);\r\n    padding: 20px 40px;\r\n    color: #fff;\r\n    font-weight: 600;\r\n    border: solid 1px;\r\n    border-radius:3%;\r\n    box-shadow: 7px -8px 11px -5px rgba(#195190FF);\r\n}\r\n.Tab{\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n.signUp, .signIn{\r\n    background-color: #A2A2A1FF;\r\n    width:50%;\r\n    font-size: 22px;\r\n    color: #201f1f;\r\n    padding: 10px;\r\n    text-align: center;\r\n}\r\n.signIn:hover, .signUp:hover {\r\n    text-decoration: none;\r\n    color: #fff;\r\n}\r\n.activeLink{\r\n    color: #fff;\r\n    background-color: #195190FF;\r\n}\r\n.border-radiusImportant{\r\n    border-radius: 5px !important;\r\n  }\r\n  .error-message{\r\n    color:red;\r\n    font-size:13px;\r\n  }\r\n  .text-blue{\r\n    color:blue;\r\n    text-align: center;\r\n    font-weight:'bold';\r\n  }\r\n  /* .sendEmail-card{\r\n    padding-top:100px;\r\n  } */\r\n  .left-img{\r\n     background-image:url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + "); \r\n     background-size: cover;\r\n\r\n    min-width:200px;\r\n  }\r\n\r\n  .signup-page {\r\n\r\n    width:444px;\r\n    /* padding:56px; */\r\n    margin:auto;\r\n\r\n  }\r\n  .signin-page, .forgotpassword-page, .resetpassword-page{\r\n\r\n    width:620px;\r\n    margin:auto;\r\n\r\n  }\r\n  .sendEmail-page{\r\n   \r\n    min-width:444px;\r\n    margin:auto;\r\n\r\n  }\r\n  .firstInfo-page, .secondInfo-page ,.social-page ,.trial-page {\r\n     width:693px;\r\n    margin:auto;\r\n  }\r\n  .trial-page {\r\n    width:750px;\r\n   margin:auto;\r\n }\r\n  .start-page{\r\n    width:879px;\r\n    margin:auto;\r\n  \r\n  }\r\n\r\n.linkback, a{\r\n  text-decoration: none;\r\n}\r\n.title {\r\n  font-family: 'Plus Jakarta Sans', sans-serif !important;\r\n }\r\n .largesize{ \r\n  font-Size:32px !important;\r\n  font-Weight:bold !important ;\r\n}\r\n.bigsize{\r\n  font-Size:32px !important;\r\n  font-Weight:600 !important ;\r\n}\r\n.smallsize{\r\n  font-Size:14px !important;\r\n  font-Weight:bold !important ;\r\n}\r\n.tinysize{\r\n  font-Size:14px !important;\r\n  font-Weight:500 !important ;\r\n  color:black !important;\r\n}\r\n.title-inter {\r\n  font-Family:'inter' !important;\r\n }\r\n.smalltitle .MuiCardHeader-title{\r\n   font-family: 'Plus Jakarta Sans', sans-serif !important;\r\n  font-Size:18px !important;\r\n  font-Weight:bold !important ;\r\n\r\n}\r\n.card{\r\n font-family: 'Plus Jakarta Sans', sans-serif !important;\r\n}\r\n.transparent{\r\n  background-color: #FFFFFF00 !important;\r\n}\r\n.transparent-mid{\r\n  background-color: #FFFFFFee !important;\r\n}\r\n\r\n.MuiButton-root,.mainButton {\r\n  border-radius: 12px !important;\r\n  height: 110%;\r\n}\r\n.background-blue{\r\n  background-color:#2970FF !important;\r\n\r\n}\r\n.mainCard{\r\n  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.03), 0 10px 10px 0 rgba(0, 0, 0, 0.03) !important;\r\n  border:0px;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38797,9 +38830,9 @@ var deepmerge_1 = deepmerge;
 
 /***/ }),
 
-/***/ "./resources/js/Assets/SVG/check-20.svg":
+/***/ "./resources/js/Assets/SVG/check-21.svg":
 /*!**********************************************!*\
-  !*** ./resources/js/Assets/SVG/check-20.svg ***!
+  !*** ./resources/js/Assets/SVG/check-21.svg ***!
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -38808,7 +38841,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/check-20.svg?c2aaa73ffd2863be527570b479c7e354");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/check-21.svg?920bd856663822be002f7246eba51651");
 
 /***/ }),
 

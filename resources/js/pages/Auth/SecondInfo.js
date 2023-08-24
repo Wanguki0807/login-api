@@ -62,12 +62,12 @@ const validationSchema = Yup.object({
   const email = JSON.parse(localStorage.getItem('Email'));
 
   const [initialValues, setInitialValues] = useState({
-    nichecategory: '',
-    budget: '',
-    companysize: '',
-    companyfounded:'',
-    aboutbusiness: '',
-    email:''
+    nichecategory: 'Your Niche Category',
+    budget: 'Your budget',
+    companysize: 'Your Company Size',
+    companyfounded:'Company founded date',
+    aboutbusiness: 'Write about your business',
+    email:'',
   });
   initialValues.email = email;
 
@@ -118,12 +118,11 @@ const validationSchema = Yup.object({
       <Typography   color="primary" variant="h4" sx={{pb:1, fontWeight:'bold',textAlign: 'center'}}>
           LOGO
              </Typography>
-        <Card elevation={16} sx={{borderRadius: 5 }}className="card  px-4 pt-4 pb-3" >
+        <Card  sx={{borderRadius: 5 }}className="mainCard card  px-4 pt-4 pb-3" >
           <CardHeader
         
             sx={{ pb: 0 }}variant="h4"
             className="title largesize my-1"
-            title="General Business Information"
           />
           <CardContent className="container">
             <form
@@ -131,6 +130,12 @@ const validationSchema = Yup.object({
               onSubmit={formik.handleSubmit}
                className = "row"
             >
+                <Typography color='black' 
+              className="title largesize mb-2"
+              // variant="h4" 
+              >
+              General Business Information
+            </Typography>
             <Stack spacing={0} className = "col-md-6 col-12">
               <div className='p-1 '>
               <RedditTextfield
@@ -174,7 +179,7 @@ const validationSchema = Yup.object({
                   fullWidth
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
-                  value={formik.values.phonenumber}
+                  value={formik.values.budget}
                 /></div>
             
               <div className='p-1  '>
@@ -200,6 +205,11 @@ const validationSchema = Yup.object({
                   name="aboutbusiness"
                   variant="filled"
                   multiline
+                  inputProps={{
+                      style: {
+                        height: "110px",
+                      },
+                    }}
                   fullWidth
                   style={{ marginTop: 11 }}
                   error={!!(formik.touched.aboutbusiness && formik.errors.aboutbusiness)}
@@ -211,7 +221,7 @@ const validationSchema = Yup.object({
 
              <div className= "row d-flex justify-content-end pt-4 px-1 title-inter">
               
-              <Button  className="text-center m-2 w-25  btn btn-hover-outline "
+              <Button  className="text-center m-2 w-25  btn btn-hover-outline mainButton smallsize"
                 color="white"
                 onClick={onCancel}
               >
@@ -220,8 +230,8 @@ const validationSchema = Yup.object({
                      
                  
               <Button
-                className="text-center  m-2 mx-0 w-50 title-inter"
-                color="primary"
+                className="text-center  m-2 mx-0 w-50 title-inter mainButton background-blue smallsize"
+              
                 style={{maxWidth: '260px', maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
               
                 sx={{ pb:0,width:200 ,fontsize:20,  fontWeight:'bold'}}

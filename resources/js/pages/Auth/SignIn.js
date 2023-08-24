@@ -102,33 +102,35 @@ const [initialValues, setInitialValues] = useState({
             <SvgIcon sx={{ mr: 1 }}>
               <ArrowLeftIcon />
             </SvgIcon>
-            <Typography variant="subtitle2">
+            <Typography variant="body1">
               Dashboard
             </Typography>
           </Link>
         </Box>
-        <Card elevation={16} sx={{borderRadius: 5 }}className="card  px-4 pt-4 pb-3" >
-          <CardHeader
+        <Card  sx={{borderRadius: 5 }}className="mainCard card  px-4 pt-4 pb-3" >
+       
+          <CardHeader 
             subheader={(
               <Typography
-              className="title-inter"
+              className="title-inter smallsize"
                 color="text.secondary"
-                variant="body1"
+                // variant="body1"
+               
               >
                 Don&apos;t have an account?
                 &nbsp;
                 <Link
                   href="/"
                   underline="hover"
-                  variant="subtitle2"
-                  className="title-inter"
+                  // variant="subtitle2"
+                  className="title-inter smallsize"
                 >
                   Register
                 </Link>
               </Typography>
             )}
             sx={{ pb: 0 }}
-          
+            className="title  smalltitle"
             title="Log in"
           />
           <CardContent>
@@ -136,6 +138,8 @@ const [initialValues, setInitialValues] = useState({
               noValidate
               onSubmit={formik.handleSubmit}
             >
+              
+
               <Stack spacing={3}>
                 <RedditTextfield
                  className="title-inter mt-4"
@@ -172,8 +176,9 @@ const [initialValues, setInitialValues] = useState({
                 size="large"
                 sx={{ mt: 5 }}
                 type="submit"
+                color="primary"
                 variant="contained"
-                className="title-inter smallsize"
+                className="title-inter smallsize mainButton background-blue"
                 
               >
                   <span className="ml-2"> { letter } </span>

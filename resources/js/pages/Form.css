@@ -60,7 +60,8 @@
 
   .signup-page {
 
-    width:540px;
+    width:444px;
+    /* padding:56px; */
     margin:auto;
 
   }
@@ -77,7 +78,7 @@
 
   }
   .firstInfo-page, .secondInfo-page ,.social-page ,.trial-page {
-     width:690px;
+     width:693px;
     margin:auto;
   }
   .trial-page {
@@ -94,7 +95,7 @@
   text-decoration: none;
 }
 .title {
-  font-Family:'Plus Jakarta Sans' !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
  }
  .largesize{ 
   font-Size:32px !important;
@@ -105,30 +106,42 @@
   font-Weight:600 !important ;
 }
 .smallsize{
-  font-Size:18px !important;
-  font-Weight:500 !important ;
+  font-Size:14px !important;
+  font-Weight:bold !important ;
 }
 .tinysize{
   font-Size:14px !important;
   font-Weight:500 !important ;
+  color:black !important;
 }
 .title-inter {
   font-Family:'inter' !important;
  }
 .smalltitle .MuiCardHeader-title{
-  font-Family:'Plus Jakarta Sans' !important;
+   font-family: 'Plus Jakarta Sans', sans-serif !important;
   font-Size:18px !important;
-  font-Weight:700 !important ;
+  font-Weight:bold !important ;
 
 }
 .card{
-  font-Family:'Plus Jakarta Sans' !important;
+ font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 .transparent{
   background-color: #FFFFFF00 !important;
 }
+.transparent-mid{
+  background-color: #FFFFFFee !important;
+}
 
-.MuiButton-root {
+.MuiButton-root,.mainButton {
   border-radius: 12px !important;
+  height: 110%;
+}
+.background-blue{
   background-color:#2970FF !important;
+
+}
+.mainCard{
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.03), 0 10px 10px 0 rgba(0, 0, 0, 0.03) !important;
+  border:0px;
 }

@@ -47,7 +47,7 @@ export default function Start (props) {
          <Typography   color="primary" variant="h3" sx={{pb:2, fontWeight:'bold',textAlign: 'center'}}>
           LOGO
              </Typography>
-        <Card elevation={16}  sx={{p:7, pt:5,mt:3 ,borderRadius: 5}} >
+        <Card className="mainCard card"  sx={{p:7, pt:5,mt:3 ,borderRadius: 5}} >
           <CardHeader variant="h5"
             sx={{ pb:0 ,  fontWeight:'bold',textAlign: 'center'}}
             className="w-100"
@@ -67,7 +67,7 @@ export default function Start (props) {
              </Typography>
              <div className= "d-flex ">
               <Button
-                className="text-center m-2 w-50 "
+                className="text-center m-2 w-50 mainButton title-inter smallsize"
                 color="primary"
                 style={{maxWidth: '260px', maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
                 sx={{ pb:2,width:200 ,fontsize:20,  fontWeight:'bold'}}
@@ -82,7 +82,7 @@ export default function Start (props) {
                 )}
               
               </Button>
-              <Button  className="text-center m-2 w-25 btn btn-outline-primary "
+              <Button  className="text-center m-2 w-25 btn btn-outline-primary mainButton title-inter smallsize"
                 size="medium"
                 color="white"
               

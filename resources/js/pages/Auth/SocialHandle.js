@@ -75,14 +75,14 @@ const validationSchema = Yup.object({
   const email = JSON.parse(localStorage.getItem('Email'));
 
   const [initialValues, setInitialValues] = useState({
-    istogram:"",   
-    tiktok:"",
-    youtube:"",   
-    facebook:"", 
-    twitter:"",  
-    pinterest:"",   
-    linkedin:"", 
-    blogurl:"",  
+    istogram:"Your Istogram Handle",   
+    tiktok:"Your Tiktok Handle",
+    youtube:"Your Youtube Handle",   
+    facebook:"Your Facebook Handle", 
+    twitter:"Your Twitter Handle",  
+    pinterest:"Your Pinterest Handle",   
+    linkedin:"Your Linkedin Handle", 
+    blogurl:"Your Blog  Url ",  
     email:""
   });
   initialValues.email = email;
@@ -105,14 +105,14 @@ const validationSchema = Yup.object({
            .then((response) => {
              if (response.data.status === 200) {
                setInitialValues({
-                istogram:"",   
-                tiktok:"",
-                youtube:"",   
-                facebook:"", 
-                twitter:"",  
-                pinterest:"",   
-                linkedin:"", 
-                blogurl:"",  
+                istogram:"Your Istogram Handle",   
+                tiktok:"Your Tiktok Handle",
+                youtube:"Your Youtube Handle",   
+                facebook:"Your Facebook Handle", 
+                twitter:"Your Twitter Handle",  
+                pinterest:"Your Pinterest Handle",   
+                linkedin:"Your Linkedin Handle", 
+                blogurl:"Your Blog  Url ",  
                 email:""
               })
               navigate('/trial')
@@ -137,7 +137,7 @@ const validationSchema = Yup.object({
       <Typography   color="primary" variant="h4" sx={{pb:1, fontWeight:'bold',textAlign: 'center'}}>
           LOGO
              </Typography>
-        <Card elevation={16} sx={{borderRadius: 5 }}className="card  px-4 pt-4 pb-3" >
+        <Card className="mainCard px-4 pt-3 pb-3 card" sx={{borderRadius: 5 }} >
           <CardHeader
           />
           <CardContent className="container">
@@ -269,9 +269,9 @@ const validationSchema = Yup.object({
                 /></div>
               </Stack>  
               
-             <div className= "row d-flex justify-content-end pt-4 px-1 title-inter">
+             <div className= "row d-flex justify-content-end pt-4 px-1 title-inter smallsize">
               
-              <Button  className="text-center m-2 w-25  btn btn-hover-outline "
+              <Button  className="text-center m-2 w-25  btn btn-hover-outline mainbutton"
                 color="white"
                 onClick={onCancel}
               >
@@ -280,8 +280,8 @@ const validationSchema = Yup.object({
                      
                  
               <Button
-                className="text-center  m-2 mx-0 w-50 title-inter"
-                color="primary"
+                className="text-center  m-2 mx-0 w-50 title-inter mainbutton background-blue smallsize"
+            
                 style={{maxWidth: '260px', maxHeight: '48px', minWidth: '100px', minHeight: '48px'}}
               
                 sx={{ pb:0,width:200 ,fontsize:20,  fontWeight:'bold'}}
