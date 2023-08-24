@@ -309,7 +309,7 @@ const verifyRecaptcha = () => {
                 variant="contained"
                 className="title-inter mainButton background-blue"
               >
-                 <span className="ml-2"> { Register.toLowerCase() } </span>
+                 <span className="ml-2"> {Register} </span>
                 {isLoading ? (
                  <CircularProgress color="inherit" size="2rem" />
                 ) : (
