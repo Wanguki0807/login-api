@@ -33131,7 +33131,7 @@ var Page = function Page() {
               className: "title-inter mainButton background-blue",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("span", {
                 className: "ml-2",
-                children: [" ", Register, " "]
+                children: [" ", Register.toLowerCase(), " "]
               }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
                 color: "inherit",
                 size: "2rem"
