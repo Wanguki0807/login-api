@@ -11,7 +11,7 @@ import SecondInfo from "../pages/Auth/SecondInfo";
 import Trial from "../pages/Auth/Trial";
 import ForgotPassword from "../pages/Auth/ForgotPassword";
 import ResetPassword from "../pages/Auth/ResetPassword";
-import Dashboard from "../../src/layouts/dashboard/index";
+import Dashboard from "../../src/layouts/dashboard/vertical-layout/index";
 import SignIn from "../pages/Auth/SignIn";
 
 
