@@ -31425,7 +31425,7 @@ var RedditTextField = (0,_mui_material_styles__WEBPACK_IMPORTED_MODULE_1__["defa
   var theme = _ref.theme;
   return {
     '& .MuiFilledInput-root': {
-      fontWeight: 'Bold',
+      fontWeight: 'regular',
       color: 'black',
       overflow: 'hidden',
       borderRadius: 10,
